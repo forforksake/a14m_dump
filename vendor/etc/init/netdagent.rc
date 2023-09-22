@@ -1,0 +1,15 @@
+service netdagent /vendor/bin/netdagent
+    class late_start
+    #socket netdagent stream 0660 root system
+    user system
+    group net_admin net_raw system misc
+    capabilities NET_ADMIN NET_RAW
+
+on property:persist.vendor.operator.optr=OP12
+    write /proc/sys/net/optr 12
+
+# NTT also need this feature. optr in kernel
+# only is like a feature option to enable this
+# feature. No longer operator code meaning again.
+on property:persist.vendor.operator.optr=OP17
+    write /proc/sys/net/optr 12

@@ -1,0 +1,2252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policy>
+    <service name="DevicePolicyManagerService">
+        <method name="getProfileOwner">
+            <package name="com.google.android.gms" seinfo="untrusted"/>
+            <package name="com.google.android.gms" seinfo="default"/>
+            <package name="com.android.vending" seinfo="untrusted"/>
+            <package name="com.android.vending" seinfo="default"/>
+            <package name="com.google.android.apps.enterprise.dmagent" seinfo="untrusted"/>
+            <package name="com.google.android.apps.enterprise.dmagent" seinfo="default"/>
+            <package name="com.sec.downloadablekeystore" seinfo="platform"/>
+            <package name="com.sec.android.preloadinstaller" seinfo="platform"/>
+        </method>
+
+        <method name="getDeviceOwnerComponent">
+            <package name="com.google.android.gms" seinfo="untrusted"/>
+            <package name="com.google.android.gms" seinfo="default"/>
+        </method>
+    </service>
+
+    <service name="TimaService">
+        <method name="attestation">
+            <package name="com.sec.enterprise.knox.attestation" seinfo="platform" />
+            <package name="com.samsung.android.knox.attestation" seinfo="platform" />
+        </method>
+        <method name="checkAttestationAccessPermission">
+            <package name="com.samsung.android.spayfw" seinfo="platform" />
+            <package name="com.samsung.android.spay" seinfo="platform" />
+            <package name="com.samsung.android.spaymini" seinfo="platform" />
+            <package name="com.sec.enterprise.knox.cloudmdm.smdms" seinfo="platform" />
+            <package name="com.samsung.klmsagent" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="PersonaManagerService">
+        <!-- KNOX3.0_START -->
+        <method name="getPersonaCacheValue">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+        </method>
+
+        <method name="updatePersonaCache">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+        </method>
+
+        <method name="setAttributes">
+            <package name="com.android.managedprovisioning" seinfo="platform" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.samsung.android.appseparation" seinfo="platform" />
+        </method>
+
+        <method name="getAttributes">
+            <package name="com.android.managedprovisioning" seinfo="platform" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="clearAttributes">
+            <package name="com.android.managedprovisioning" seinfo="platform" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+            <package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
+            <package name="com.android.settings" seinfo="platform" />
+        </method>
+
+        <method name="refreshLockTimer">
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+        </method>
+
+        <method name="setPackageSettingInstalled">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="sendProxyMessage">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+            <package name="com.android.managedprovisioning" seinfo="platform" />
+            <package name="com.samsung.android.mdm" seinfo="platform" />
+            <package name="com.samsung.android.settings" seinfo="platform" />
+            <package name="com.sec.android.emergencymode.service" seinfo="platform" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.android.systemui" seinfo="platform" />
+            <package name="com.samsung.android.biometrics.app.setting" seinfo="platform" />
+        </method>
+
+        <method name="hideMultiWindows">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+        <!-- KNOX3.0_END -->
+
+        <method name="getFidoRpContext">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="setFidoRpContext">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.android.settings" seinfo="shared" />
+        </method>
+
+        <method name="getInstance">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="registerSystemPersonaObserver">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="systemReady">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="resetPersonaDataPartition">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="unInstallSystemApplications">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="PersonaHandler">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="addAppListForPersona">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onWakeLockChange">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="notifyKeyguardShow">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="updateProfileActivityTimeFromKnox">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+        </method>
+
+        <method name="resetPersonaPassword">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="postActiveUserChange">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="showKeyguard">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+
+        <method name="setFocusedLauncherId">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="setFocusedUser">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="getAdminComponentName">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="getContainerCriticalApps">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="startActivityThroughPersona">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+        </method>
+
+        <method name="broadcastIntentThroughPersona">
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="isKnoxProfileActivePasswordSufficientForParent">
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="isPasswordSufficientAfterKnoxProfileUnification">
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="CMFALock">
+            <package name="com.samsung.android.cmfa.framework" seinfo="platform" />
+            <package name="com.samsung.android.cmfa.framework" seinfo="shared" />
+        </method>
+
+        <method name="CMFAUnLock">
+            <package name="com.samsung.android.cmfa.framework" seinfo="platform" />
+            <package name="com.samsung.android.cmfa.framework" seinfo="shared" />
+        </method>
+    </service>
+
+    <service name="RCPManagerService">
+        <method name="queryProvider">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="queryAllProviders">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="registerProvider">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="registerSync">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="registerRCPGlobalContactsDir">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="registerCommandExe">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="registerRCPInterface">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="executeCommandForPersona">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="switchPersona">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getPolicy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="refreshClipboard">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="getUsersToSyncFrom">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="setupClipbardSandbox">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="saveSharedSandbox">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="copyClipboardFile">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="deleteClipboardFile">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="getRCPProxy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="getRCPInterface">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.google.android.packageinstaller" seinfo="default" />
+        </method>
+
+        <method name="getCallerInfo">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="copyFile">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.knox.rcp.components" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.sec.knox.foldercontainer" seinfo="platform" />
+            <package name="com.sec.knox.bluetooth" seinfo="platform" />
+            <package name="com.sec.knoxcts" seinfo="platform" />
+            <package name="com.android.packageinstaller" seinfo="platform" />
+            <package name="com.google.android.packageinstaller" seinfo="default" />
+            <package name="com.sec.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
+        </method>
+
+        <method name="moveFile">
+            <package name="com.samsung.knox.rcp.components" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.sec.knoxcts" seinfo="platform" />
+            <package name="com.sec.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
+        </method>
+
+        <method name="isFileExist">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="registerExchangeData">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="exchangeData">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="onUserSwitching">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onUserSwitchComplete">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onPersonaActive">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onRemovePersona">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onResetPersona">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="handleShortcut">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="checkSAccount">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="checkSAccountPassword">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="getFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="deleteFile">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="getFileInfo">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="copyChunks">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="cancelCopyChunks">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="changePermissionMigration">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+        </method>
+
+        <method name="startRCPProxy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="onKnoxContainerLaunch">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onStateChange">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="moveFilesForApp">
+            <package name="com.sec.android.gallery3d" seinfo="platform" />
+            <package name="com.sec.android.app.music" seinfo="platform" />
+            <package name="com.sec.android.app.myfiles" seinfo="platform" />
+            <package name="com.samsung.everglades.video" seinfo="platform" />
+            <package name="com.samsung.android.video" seinfo="platform" />
+            <package name="com.samsung.video" seinfo="platform" />
+            <package name="com.samsung.android.onlinevideo" seinfo="platform" />
+            <package name="com.samsung.android.videolist" seinfo="platform" />
+            <package name="com.samsung.android.app.music.chn" seinfo="platform" />
+            <package name="com.samsung.android.app.notes" seinfo="platform" />
+            <package name="com.samsung.android.gear360manager" seinfo="platform" />
+            <package name="com.samsung.android.samsunggear360manager" seinfo="platform" />
+            <package name="com.samsung.android.gear360manager" seinfo="platform" />
+            <package name="com.samsung.android.gear360viewer" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.sec.android.app.voicenote" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="Proxy">
+        <method name="setSessionId">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="doSync">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="deletePersonaData">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="singleClipDeleted">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="allClipsCleared">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="execute">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="queryProvider">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="getCallerInfoDetails">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="queryAllProviders">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="setupClipboardSandbox">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="saveSharedSandbox">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="getUsersToSyncFrom">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="copyClipboardFile">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="deleteClipboardFile">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="refreshClipboard">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="getCallerInfo">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="copyFile">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.samsung.knox.rcp.components" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.sec.knox.bluetooth" seinfo="platform" />
+            <package name="com.android.packageinstaller" seinfo="platform" />
+            <package name="com.google.android.packageinstaller" seinfo="default" />
+            <package name="com.sec.knox.foldercontainer" seinfo="platform" />
+            <package name="com.sec.knoxcts" seinfo="platform" />
+            <package name="com.sec.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
+        </method>
+
+        <method name="moveFile">
+            <package name="com.samsung.knox.rcp.components" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.sec.knoxcts" seinfo="platform" />
+            <package name="com.sec.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
+        </method>
+
+        <method name="getErrorMessage">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="isFileExist">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="handleMessage">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="2" />
+        </method>
+
+        <method name="handleShortcut">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="checkSAccount">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="checkSAccountPassword">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="copyFiles">
+            <package name="com.samsung.knox.rcp.components" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.sec.knox.bluetooth" seinfo="platform" />
+            <package name="com.sec.knox.switcher" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+        </method>
+
+        <method name="moveFiles">
+            <package name="com.samsung.knox.rcp.components" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
+        </method>
+
+        <method name="moveFilesForApp">
+            <package name="com.sec.android.gallery3d" seinfo="platform" />
+            <package name="com.sec.android.app.music" seinfo="platform" />
+            <package name="com.sec.android.app.myfiles" seinfo="platform" />
+            <package name="com.samsung.everglades.video" seinfo="platform" />
+            <package name="com.samsung.android.video" seinfo="platform" />
+            <package name="com.samsung.video" seinfo="platform" />
+            <package name="com.samsung.android.onlinevideo" seinfo="platform" />
+            <package name="com.samsung.android.videolist" seinfo="platform" />
+            <package name="com.samsung.android.app.music.chn" seinfo="platform" />
+            <package name="com.samsung.android.app.notes" seinfo="platform" />
+            <package name="com.samsung.android.gear360manager" seinfo="platform" />
+            <package name="com.samsung.android.samsunggear360manager" seinfo="platform" />
+            <package name="com.samsung.android.gear360manager" seinfo="platform" />
+            <package name="com.samsung.android.gear360viewer" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+            <package name="com.sec.android.app.voicenote" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts" seinfo="platform" />
+            <package name="com.samsung.android.knoxcts.pal.service" seinfo="platform" />
+            <package name="com.samsung.knoxautomation" seinfo="platform" />
+            <package name="com.samsung.sept.KNOX" seinfo="platform"/>
+        </method>
+
+        <method name="getFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="getFileInfo">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="copyChunks">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="cancelCopyChunks">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="cancel">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="registerProvider">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.samsung.knox.rcp.components" seinfo="platform" />
+            <package name="com.samsung.knox.rcp.components" seinfo="shared" />
+        </method>
+    </service>
+
+    <service name="PersonaFileManagerService">
+        <method name="createPartition">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="removePartition">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="mount">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="unmount">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="changeEncryptionKey">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="isEncrypted">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+    </service>
+
+
+    <service name="PersonaPolicyManagerService">
+        <method name="PersonaPolicyManagerService">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="registerReceivers">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setPasswordLockPolicy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getPasswordLockPolicy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.android.settings" seinfo="shared" />
+            <package name="com.android.systemui" seinfo="platform" />
+            <package name="com.android.systemui" seinfo="shared" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="shared" />
+        </method>
+
+        <method name="setEncryptionStatus">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+            <package name="com.android.settings" seinfo="shared" />
+            <package name="com.sec.knox.securehandler" seinfo="shared" />
+        </method>
+
+        <method name="getEncryptionStatus">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setSecureKeystoreEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+            <package name="com.android.settings" seinfo="shared" />
+            <package name="com.sec.knox.securehandler" seinfo="shared" />
+        </method>
+
+        <method name="getSecureKeystoreEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setCameraModeChangeEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getCameraModeChangeEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowCustomBadgeIcon">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowCustomBadgeIcon">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setDisableSwitchWidgetOnLockScreen">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getDisableSwitchWidgetOnLockScreen">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowCustomPersonaIcon">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowCustomPersonaIcon">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowCustomColorIdentification">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowCustomColorIdentification">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowContainerReset">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowContainerReset">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowShortCutCreation">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowShortCutCreation">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowDLNADataTransfer">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowDLNADataTransfer">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowPrint">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowPrint">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setModifyLockScreenTimeout">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getModifyLockScreenTimeout">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowAllShare">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowAllShare">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setGearSupportEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getGearSupportEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setPenWindowEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getPenWindowEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAirCommandEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAirCommandEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowUniversalCallerId">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowUniversalCallerId">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowImportFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowImportFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowExportFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowExportFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setAllowExportAndDeleteFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getAllowExportAndDeleteFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setSwitchNotifEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getSwitchNotifEnabled">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.switcher" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getRCPDataPolicyForUser">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getRCPNotificationPolicyForUser">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getRCPDataPolicy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="getRCPNotificationPolicy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setRCPDataPolicy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+
+        <method name="setRCPNotificationPolicy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="EnterprisePartitionManager">
+        <method name="getInstance">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.google.android.packageinstaller" seinfo="default" />
+            <agentType value="8" />
+        </method>
+
+        <method name="isReady">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="onDaemonConnected">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="onEvent">
+            <agentType value="8" />
+        </method>
+
+        <method name="mount">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="unmount">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="changePassword">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="verifyPassword">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="createPartition">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="removePartition">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="resetPartition">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="createExtSdPartition">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="removeExtSdPartition">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="mountExtSd">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="unmountExtSd">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="isFileExist">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="sendDLPCommand">
+            <seinfo value="platform" />
+            <agentType value="8" />
+        </method>
+
+        <method name="copy">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.google.android.packageinstaller" seinfo="default" />
+            <agentType value="8" />
+        </method>
+
+        <method name="move">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="copy_overload">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="move_overload">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="getFileInfo">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="cancelCopyChunks">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="copyChunks">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="getFiles">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="deleteFile">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="isMounted">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.google.android.packageinstaller" seinfo="default" />
+            <agentType value="8" />
+        </method>
+
+        <method name="changePermissionMigration">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+        </method>
+
+        <method name="changePermissionMigration">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="migration">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="syncFS">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="createEncPkgDir">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="removeEncPkgDir">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="createChamber">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+
+        <method name="removeChamber">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <agentType value="8" />
+        </method>
+    </service>
+
+
+    <service name="SEAMS">
+        <method name="changeAppDomain">
+            <package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
+        </method>
+
+        <method name="getSeinfo">
+            <package name="com.samsung.android.bbc.bbcagent" seinfo="platform" />
+        </method>    
+    </service>
+
+    <service name="KnoxMUMContainerPolicy">
+        <!-- KNOX3.0_START -->
+        <method name="checkProvisioningPreCondition">
+            <seinfo value="platform" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.android.managedprovisioning" seinfo="platform" />
+        </method>
+
+        <method name="updateProvisioningState">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.android.managedprovisioning" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+        </method>
+
+        <method name="getProvisioningState">
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+            <package name="com.android.managedprovisioning" seinfo="platform" />
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.samsung.knox.securefolder" seinfo="platform" />
+        </method>
+
+        <method name="addSecureKeyPad">
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="removeSecureKeyPad">
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="getSecureKeyPad">
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+            <package name="com.android.settings" seinfo="platform" />
+        </method>
+
+        <!-- KNOX3.0_END -->
+
+        <method name="removeContainer">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="systemReady">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="createContainerInternal">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.samsung.android.knox.containercore" seinfo="platform" />
+        </method>
+
+        <method name="createContainerMarkSuccess">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="cancelCreateContainer">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onAdminAdded">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onAdminRemoved">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="onPreAdminRemoval">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+
+        <method name="getDefaultConfigurationTypes">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.sec.enterprise.knox.container" seinfo="platform" />
+            <package name="com.sec.enterprise.knox.container" seinfo="shared" />
+        </method>
+
+        <method name="getContainerCreationParams">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.sec.enterprise.knox.container" seinfo="platform" />
+            <package name="com.sec.enterprise.knox.container" seinfo="shared" />
+        </method>
+
+        <method name="getEnforceAuthForContainer">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.sec.knox.securehandler" seinfo="platform" />
+            <package name="com.sec.enterprise.knox.container" seinfo="platform" />
+            <package name="com.sec.enterprise.knox.container" seinfo="shared" />
+        </method>
+    </service>
+
+    <service name="CardManagerService">
+        <method name="getVersion">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <seinfo value="container" />
+        </method>
+
+        <method name="getPin">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <seinfo value="container" />
+        </method>
+
+        <method name="connectCryptoService">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <seinfo value="container" />
+        </method>
+
+        <method name="disconnectCryptoService">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <seinfo value="container" />
+        </method>
+
+        <method name="getCryptoServiceSocket">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <seinfo value="container" />
+        </method>
+    </service>
+
+
+    <service name="tima">
+        <method name="ccmRegisterForDefaultCertificate">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.sec.enterprise.knox.cloudmdm.smdms" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="FirewallPolicy">
+        <method name="saveURLBlockedReport">
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
+        </method>
+
+        <method name="getURLFilterEnabled">
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
+        </method>
+
+        <method name="getURLFilterReportEnabled">
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
+        </method>
+
+        <method name="getURLFilterList">
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
+        </method>
+    </service>
+
+    <service name="CertificatePolicy">
+        <method name="notifyCertificateFailure">
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
+        </method>
+    </service>
+
+    <service name="knox_ccm_policy">
+        <method name="getSlotIdForPackage">
+            <seinfo value="release" />
+            <seinfo value="media" />
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <seinfo value="umcjsagent" />
+        </method>
+
+        <method name="C_SignInit">
+            <package name="com.samsung.pasc" seinfo="release" />
+            <package name="com.f5.edge.client_ics" seinfo="untrusted" />
+            <package name="com.f5.edge.client_ics" seinfo="default" />
+            <package name="com.samsung.android.oneconnect" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="knox_esecomm_policy">
+        <method name="native">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+            <package name="com.samsung.ucs.agent.boot" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="knox_timakeystore_policy">
+        <method name="isTimaKeystoreEnabled">
+            <seinfo value="umcjsagent" />
+            <package name="com.samsung.klmsagent" seinfo="platform" />
+            <package name="com.sec.enterprise.knox.cloudmdm.smdms" seinfo="platform" />
+            <package name="com.sec.enterprise.knox.express" seinfo="platform" />
+            <package name="com.samsung.android.spayfw" seinfo="platform" />
+            <package name="com.samsung.android.spay" seinfo="platform" />
+            <package name="com.samsung.android.spaymini" seinfo="platform" />
+            <package name="com.samsung.ucm.baiplugin" seinfo="platform" />
+            <package name="com.samsung.android.oneconnect" seinfo="platform" />
+            <package name="com.samsung.android.knox.analytics.uploader" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="AuditLogService">
+        <method name="AuditLogger">
+            <package name="com.android.chrome" seinfo="untrusted" />
+            <package name="com.android.chrome" seinfo="default" />
+            <package name="com.android.bluetooth" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="SdpManagerService">
+        <method name="SdpHandler">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+        </method>
+
+        <method name="isSensitiveColumn">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="addColumn">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onBoot">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onDeviceLocked">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onDeviceUnlocked">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onChangePassword">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onUserAdded">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onUserRemoved">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="getState">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="isSDPEnabled">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="setSensitiveFileInfo">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="setSensitiveDBInfo">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="getSensitiveFileInfo">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="getSensitiveDBInfo">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="setSDPMigrating">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="isSdpMigrating">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="saveTokenIntoTrusted">
+            <package name="com.sec.android.app.sbrowser" seinfo="platform" />
+        </method>
+
+        <method name="deleteToeknFromTrusted">
+            <package name="com.sec.android.app.sbrowser" seinfo="platform" />
+        </method>
+
+        <method name="unlockViaTrusted">
+            <package name="com.sec.android.app.sbrowser" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="SdpManagerImpl">
+        <method name="SdpHandler">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+            <package name="com.android.settings" seinfo="platform" />
+        </method>
+
+        <method name="isSensitiveColumn">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="addColumn">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onBoot">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onDeviceLocked">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onDeviceUnlocked">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onChangePassword">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onUserAdded">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="onUserRemoved">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="getState">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="isSDPEnabled">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="setSensitiveFileInfo">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="setSensitiveDBInfo">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="getSensitiveFileInfo">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="getSensitiveDBInfo">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="setSDPMigrating">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="isSdpMigrating">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="saveTokenIntoTrusted">
+            <package name="com.sec.android.app.sbrowser" seinfo="platform" />
+        </method>
+
+        <method name="deleteToeknFromTrusted">
+            <package name="com.sec.android.app.sbrowser" seinfo="platform" />
+        </method>
+
+        <method name="unlockViaTrusted">
+            <package name="com.sec.android.app.sbrowser" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="SdpLogService">
+        <method name="enqPayload">
+            <seinfo value="platform" />
+            <seinfo value="aasa_platform" />
+        </method>
+    </service>
+
+    <service name="PaymentManagerService">
+        <package name="com.samsung.android.spayfw" seinfo="platform" />
+        <package name="com.samsung.android.spay" seinfo="platform" />
+        <package name="com.samsung.android.spaymini" seinfo="platform" />
+        <package name="com.samsung.android.coldwalletservice" seinfo="platform" />
+    </service>
+
+    <service name="BlockchainTZService">
+        <package name="com.samsung.android.coldwalletservice" seinfo="platform" />
+        <package name="com.samsung.android.digitalkey" seinfo="platform" />
+        <package name="com.samsung.android.carkey" seinfo="platform" />
+    </service>
+
+
+    <service name="PaymentFramework">
+        <!-- Since additional callers can be added later, this needs to be maintained in a way such that it can be updated without FOTA.
+             So, Mac_permissions.xml (can be updated through SPD) verifies the signature, package name and assigns a seinfo.
+             Authorize.xml depends on this seinfo and does not have a check for package name -->
+        <seinfo value="platform" />
+    </service>
+
+
+    <service name="UniversalCredentialManagerService">
+        <method name="getDefaultInstallStorageAsUser">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="isCredentialStorageManagedAsUser">
+            <package name="com.android.settings" seinfo="platform" />
+        </method>
+
+        <method name="getEnforcedCredentialStorageForLockTypeAsUser">
+            <package name="com.android.settings" seinfo="platform" />
+            <package name="com.samsung.android.knox.containeragent" seinfo="platform" />
+            <package name="com.samsung.android.knox.containerdesktop" seinfo="platform" />
+        </method>
+
+        <method name="installCertificateInternal">
+            <package name="com.samsung.android.certenrollservice.scep" seinfo="platform" />
+            <package name="com.samsung.android.certenrollservice.cmp" seinfo="platform" />
+            <package name="com.samsung.android.certenrollservice.cmc" seinfo="platform" />
+        </method>
+
+        <method name="deleteCertificateInternal">
+            <package name="com.samsung.android.certenrollservice.scep" seinfo="platform" />
+            <package name="com.samsung.android.certenrollservice.cmp" seinfo="platform" />
+            <package name="com.samsung.android.certenrollservice.cmc" seinfo="platform" />
+        </method>
+
+        <method name="addPackagesToWhiteListInternal">
+            <package name="com.samsung.android.certenrollservice.scep" seinfo="platform" />
+            <package name="com.samsung.android.certenrollservice.cmp" seinfo="platform" />
+            <package name="com.samsung.android.certenrollservice.cmc" seinfo="platform" />
+        </method>
+    </service>
+
+    <service name="CredentialManagerService">
+        <method name="notifyChangeToPlugin">
+            <seinfo value="platform" />
+        </method>
+
+        <method name="generateKeyPairInternal">
+            <package name="com.samsung.android.certenrollservice.scep" seinfo="platform" />
+            <package name="com.samsung.android.certenrollservice.cmp" seinfo="platform" />
+            <package name="com.samsung.android.certenrollservice.cmc" seinfo="platform" />
+        </method>
+        
+        <method name="delegateLoadTa">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+        </method>
+        
+        <method name="delegateUnloadTa">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+        </method>
+        
+        <method name="delegateGetTaProfile">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+        </method>
+        
+        <method name="delegateWrapSessionKey">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+        </method>
+        
+        <method name="delegateProcessTACommand">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+        </method>
+
+        <method name="delegateReadFile">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+        </method>
+
+        <method name="delegateSaveFile">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+        </method>
+
+        <method name="delegateDeleteFile">
+            <package name="com.samsung.ucs.agent.ese" seinfo="platform" />
+        </method>
+
+        <method name="resetNonMdmCertificates">
+            <seinfo value="platform" />
+        </method>
+    </service>
+
+    <service name="DLPManagerService">
+        <method name="DLPHandler">
+            <seinfo value="platform" />
+            <seinfo value="shared" />
+        </method>
+    </service>
+
+    <service name="IcccManagerService">
+        <method name="getDeviceStatus">
+            <package name="com.samsung.iccctest" seinfo="platform"/>
+            <package name="com.sec.android.soagent" seinfo="platform"/>
+            <package name="com.sec.android.diagmonagent" seinfo="platform"/>
+        </method>
+
+        <method name="setAttestationData">
+            <package name="com.samsung.android.knox.attestation" seinfo="platform"/>
+        </method>
+
+        <method name="getDeviceInfo">
+            <package name="com.samsung.iccctest" seinfo="platform"/>
+            <package name="com.sec.android.soagent" seinfo="platform"/>
+            <package name="com.sec.android.diagmonagent" seinfo="platform"/>
+        </method>
+    </service>
+
+    <service name="FilteredAPIs">
+        <method name="queryPhoneLookupEnterpriseForKnox"/>
+        <method name="getProfileOwner"/>
+        <method name="getDeviceOwnerComponent"/>
+        <method name="isTimaKeystoreEnabled"/>
+        <method name="isCallerInfoBrowsingAllow"/>
+        <method name="isBluetoothEnterpriseContactSharingDisabled"/>
+        <method name="openCorpContactPicture"/>
+    </service>
+</policy>

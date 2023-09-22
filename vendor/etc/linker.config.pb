@@ -1,0 +1,1 @@
+unihal_uniplugin@1.0.solibmpbase.solibOpenCL.solibOpenCv.camera.samsung.so libDLInterface.camera.samsung.solibsecnativefeature.solibsensorlistener.solibtswrappercommon.solibsnap_vndk.so"!libscenedetector.uniplugin@1.0.so",libsocial_image_enhancement.uniplugin@1.0.so"com.ss.stats.aec.so"com.ss.stats.af.so"com.ss.stats.awb.so"com.ss.stats.pdlib.so

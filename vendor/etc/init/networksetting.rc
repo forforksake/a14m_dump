@@ -1,0 +1,18 @@
+on early-init
+    # Change AOSP default tcp congestion control from cubic to bic.
+    write /proc/sys/net/ipv4/tcp_congestion_control bic
+
+    # When a black hole is detected starts MTU probing
+    write /proc/sys/net/ipv4/tcp_mtu_probing 1
+
+    # turn off hybrid slow start algorithm
+    write /sys/module/tcp_cubic/parameters/hystart 0
+
+    # When ftp is active mode, if nf_conntrack_helper is default value--0,
+    # ftp download/upload session will fail with usb tethering, because ftp
+    # response msg doesnot change ip to 192.168.42.xx manually
+    write /proc/sys/net/netfilter/nf_conntrack_helper 1
+
+    # Decrease gro_normal_batch to 1, to avoid received packets are accumulated
+    # which will result from timeout in the lower throughput case--such as mms
+    # write /proc/sys/net/core/gro_normal_batch 1

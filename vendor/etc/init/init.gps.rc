@@ -1,0 +1,50 @@
+on post-fs-data
+# GPS EMI
+    chmod 666 /dev/gps_emi
+	
+# Directory for GPS
+    mkdir /data/vendor 0771 system system
+    chown system system /data/vendor
+    mkdir /data/vendor/gps 0771 system system
+    chown system system /data/vendor/gps
+    rm /data/vendor/gps/gps_started
+    rm /data/vendor/gps/glonass_started
+    rm /data/vendor/gps/beidou_started
+    rm /data/vendor/gps/smd_started
+    rm /data/vendor/gps/sv_cno.info
+    mkdir /data/vendor/agps_supl 0771 gps system
+
+# GPS daemon
+service mnld /vendor/bin/mnld
+    class main
+    user gps
+    capabilities WAKE_ALARM
+    group gps inet misc sdcard_rw sdcard_r media_rw system radio wakelock
+    socket mnld stream 660 gps system
+
+service agpsd /vendor/bin/mtk_agpsd
+    class main
+    socket agpsd stream 660 gps system
+    socket agpsd2 stream 660 gps inet
+    socket agpsd3 stream 660 gps inet
+    user gps
+    group gps radio inet sdcard_r sdcard_rw misc system
+
+# GPS Debug Process
+service lbs_dbg /system/bin/lbs_dbg
+    class main
+    user shell
+    group log system gps inet misc sdcard_rw sdcard_r media_rw radio
+    socket lbs_dbg stream 660 gps system
+
+on property:dev.gnss.silentlogging=ON
+    mkdir /data/vendor/gps/silentGnssLogging 0771 system system
+
+on property:dev.gnss.silentlogging=OFF
+    rmdir /data/vendor/gps/silentGnssLogging
+
+on property:dev.gnss.silentloggingIssueTracker=ON
+    mkdir /data/vendor/gps/silentGnssLogging 0771 system system
+
+on property:dev.gnss.silentloggingIssueTracker=OFF
+    rmdir /data/vendor/gps/silentGnssLogging

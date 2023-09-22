@@ -1,0 +1,6 @@
+service ucmtlc-hal-service /vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@2.0-service
+    interface vendor.samsung.hardware.tlc.ucm@2.0::ISehUcm default
+    class hal
+    user system
+    group system
+    disabled

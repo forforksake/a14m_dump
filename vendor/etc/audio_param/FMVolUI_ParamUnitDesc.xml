@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="Profile">
+			<Category name="HS" alias="Headset"/>
+			<Category name="SPK_INT" alias="SPK,Speaker" feature_option="SPK_PATH_INT"/>
+			<Category name="SPK_LO" alias="SPK,Speaker" feature_option="SPK_PATH_LO"/>
+			<Category name="SPK_HP" alias="SPK,Speaker" feature_option="SPK_PATH_HP"/>
+			<Category name="SPK_NO_ANA" alias="SPK,Speaker" feature_option="SPK_PATH_NO_ANA"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="headset_pga_visibility" type="int"/>
+		<Param name="speaker_pga_visibility" type="int"/>
+		<Param name="record_gain_visibility" type="int"/>
+	</ParamUnit>
+</ParamUnitDesc>

@@ -1,0 +1,8 @@
+service mmagent-1-1 /vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
+    interface vendor.mediatek.hardware.mmagent@1.1::IMMAgent default
+    interface vendor.mediatek.hardware.mmagent@1.0::IMMAgent default
+    class main
+    oneshot
+    disabled
+    user system
+    group system graphics

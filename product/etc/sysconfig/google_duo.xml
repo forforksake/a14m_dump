@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- This is for update Samsung DUO from play store -->
+    <feature name="com.samsung.feature.SAMSUNG_EXPERIENCE" />
+</config>

@@ -1,0 +1,25 @@
+# block device - multiple to allow custom roms
+/system_image  emmc         /dev/block/mapper/system                                        flags=backup=1;display="System_Image";
+/vendor_image  emmc         /dev/block/mapper/vendor                                        flags=backup=1;display="Vendor_Image";
+/odm_image     emmc         /dev/block/mapper/odm                                           flags=backup=1;display="ODM_Image";
+/product_image emmc         /dev/block/mapper/product                                       flags=backup=1;display="Product_Image";
+
+/boot          emmc     /dev/block/platform/bootdevice/by-name/boot                          flags=backup=1;display="Boot";flashimg;
+/cache         ext4     /dev/block/platform/bootdevice/by-name/cache                         flags=backup=1;display="Cache";
+/efs           ext4     /dev/block/platform/bootdevice/by-name/sec_efs                       flags=backup=1;display="EFS";
+
+/nvcgfg                  ext4        /dev/block/platform/bootdevice/by-name/nvcfg                flags=display="Nvcfg";backup=1;
+/nvdata                  ext4        /dev/block/platform/bootdevice/by-name/nvdata               flags=display="Nvdata";wipeduringfactoryreset;formattable;backup=1;
+/nvram                   emmc        /dev/block/platform/bootdevice/by-name/nvram                flags=display="nvram";backup=1;
+
+/optics       ext4     /dev/block/platform/bootdevice/by-name/optics                        flags=backup=1;flashimg;display="Optics";
+/prism        ext4     /dev/block/platform/bootdevice/by-name/prism                         flags=backup=1;flashimg;display="Prism";
+
+/recovery     emmc     /dev/block/platform/bootdevice/by-name/recovery                      flags=backup=1;display="Recovery";flashimg;
+
+# SD Card & USB-OTG Points
+/sdcard1      vfat    /dev/block/mmcblk1p1         /dev/block/mmcblk1                       flags=fsflags=utf8;display="MicroSD";storage;wipeingui;removable;
+/usb_otg      vfat    /dev/block/sdd1              /dev/block/sdd                           flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable;
+
+## Internal storage (Ofox Requirement)
+/storage            f2fs      /data/media/0                                                 flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable;

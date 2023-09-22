@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="Category">
+			<Category name="NB"/>
+			<Category name="WB"/>
+		</CategoryType>
+		<CategoryType name="Profile" wording="Audio Path">
+			<Category name="HANDSET_PATH" alias="Handset 2mic NR,Handset no 2mic NR,Normal"/>
+			<Category name="HEADSET_PATH" alias="4-pole headset,4_pole_Headset"/>
+			<Category name="HEADSET_3P5PI_PATH" alias="3-pole headset,3_pole_Headset"/>
+			<Category name="SPEAKER_PATH" alias="Hands-free 1mic NR,Hands-free no 1mic NR,Handsfree,MagiConference"/>
+			<Category name="BLUETOOTH_PATH" alias="BT earphone,BT_Earphone"/>
+			<Category name="ST_BLUETOOTH_PATH"/>
+			<Category name="BT_NSEC_OFF_PATH" alias="BT_NREC_Off"/>
+			<Category name="SPEAKERDOCK_PATH"/>
+			<Category name="USB" alias="Usb_Headset"/>
+			<Category name="SPK_EV_PATH"/>
+			<Category name="HANDSET_EV_PATH"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+		<Param name="DV param" type="short_array"/>
+	</ParamUnit>
+</ParamUnitDesc>

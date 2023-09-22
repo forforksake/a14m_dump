@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AudioParam>
+	<ParamTree>
+		<Param path="HS" param_id="1"/>
+		<Param path="SPK" param_id="0"/>
+	</ParamTree>
+	<ParamUnitPool>
+		<ParamUnit param_id="0">
+			<Param name="headset_pga" value="-1"/><!-- -1 means not available -->
+			<Param name="speaker_pga" value="10"/>
+			<Param name="amp" value="0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0"/>
+			<Param name="record_gain" value="0"/>
+		</ParamUnit>
+		<ParamUnit param_id="1">
+			<Param name="headset_pga" value="8"/>
+			<Param name="speaker_pga" value="-1"/>
+			<Param name="amp" value="0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0"/>
+			<Param name="record_gain" value="0"/>
+		</ParamUnit>
+	</ParamUnitPool>
+</AudioParam>

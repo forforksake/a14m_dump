@@ -1,0 +1,1092 @@
+----------------------------------------------------------
+PIT Magic v1.3.10 Copyright © Gaz 2012.
+----------------------------------------------------------
+Analysis for: pits.pit
+----------------------------------------------------------
+
+
+----------------------------------------------------------
+<<< Pit File Start >>>
+----------------------------------------------------------
+
+
+----------------------------------------------------------
+<<< PIT File Header Information >>>
+----------------------------------------------------------
+
+Header Magic: 0x12349876     (4 Bytes)
+Entry Count:  57             (4 Bytes)
+
+----------------------------------------------------------
+Dummy Data #1 (In String and Hexadecimal Format):
+----------------------------------------------------------
+String:       COM_
+Hexadecimal:  434F4D5F
+
+----------------------------------------------------------
+Dummy Data #2 (In String and Hexadecimal Format):
+----------------------------------------------------------
+String:       TAR2
+Hexadecimal:  54415232
+
+----------------------------------------------------------
+Dummy Data #3 (In String and Hexadecimal Format):
+----------------------------------------------------------
+String:       MTK6
+Hexadecimal:  4D544B36
+
+----------------------------------------------------------
+Dummy Data #4 (In String and Hexadecimal Format):
+----------------------------------------------------------
+String:       765
+Hexadecimal:  37363500
+
+----------------------------------------------------------
+Dummy Data #5 (In String and Hexadecimal Format):
+----------------------------------------------------------
+String:       
+Hexadecimal:  00000000
+
+----------------------------------------------------------
+Dummy Data Length: (4 Bytes Per Block, 20 Bytes In Total.)
+----------------------------------------------------------
+
+Header Size: (28 Bytes)
+
+
+----------------------------------------------------------
+<<< PIT File Entries >>>
+----------------------------------------------------------
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 80
+Attribute:                  2                (STL)
+Update Attribute:           1               (FOTA)
+Block Size:                 
+Block Count:                8,192
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             bootloader
+Flash FileName:             preloader.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xA0
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 70
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 
+Block Count:                34
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             pgpt
+Flash FileName:             pgpt.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x124
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 71
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 34
+Block Count:                32
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             pit
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1A8
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 72
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 66
+Block Count:                8,126
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             md5hdr
+Flash FileName:             md5.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x22C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 1
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 8,192
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             efs
+Flash FileName:             efs.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x2B0
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 2
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 24,576
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             sec_efs
+Flash FileName:             sec_efs.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x334
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 3
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 40,960
+Block Count:                8,192
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             steady
+Flash FileName:             steady.bin
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x3B8
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 4
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 49,152
+Block Count:                131,072
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             nvram
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x43C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 5
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 180,224
+Block Count:                2,048
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             spmfw
+Flash FileName:             spmfw-verified.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x4C0
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 6
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 182,272
+Block Count:                2,048
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             scp1
+Flash FileName:             scp-verified.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x544
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 7
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 184,320
+Block Count:                2,048
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             sspm_1
+Flash FileName:             sspm-verified.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x5C8
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 8
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 186,368
+Block Count:                4,096
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             tee1
+Flash FileName:             tee-verified.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x64C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 9
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 190,464
+Block Count:                8,192
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             tzar
+Flash FileName:             tzar.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x6D0
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 10
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 198,656
+Block Count:                32,768
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             gz1
+Flash FileName:             gz-verified.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x754
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 11
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 231,424
+Block Count:                4,096
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             lk
+Flash FileName:             lk-verified.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x7D8
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 12
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 235,520
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             dtbo
+Flash FileName:             dtbo.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x85C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 13
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 251,904
+Block Count:                128
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             vbmeta
+Flash FileName:             vbmeta.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x8E0
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 14
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 252,032
+Block Count:                10,112
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             btd
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x964
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 15
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 262,144
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             protect1
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x9E8
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 16
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 278,528
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             protect2
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xA6C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 17
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 294,912
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             seccfg
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xAF0
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 18
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 311,296
+Block Count:                92,160
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             bota
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xB74
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 19
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 403,456
+Block Count:                2,048
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             boot_para
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xBF8
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 20
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 405,504
+Block Count:                1,024
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             para
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xC7C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 21
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 406,528
+Block Count:                1,024
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             misc
+Flash FileName:             misc.bin
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xD00
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 22
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 407,552
+Block Count:                40,960
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             expdb
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xD84
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 23
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 448,512
+Block Count:                2,048
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             frp
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xE08
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 24
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 450,560
+Block Count:                65,536
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             nvcfg
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xE8C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 25
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 516,096
+Block Count:                131,072
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             nvdata
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xF10
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 26
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 647,168
+Block Count:                65,536
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             metadata
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0xF94
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 27
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 712,704
+Block Count:                32,768
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             keyrefuge
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1018
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 28
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 745,472
+Block Count:                32,768
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             keydata
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x109C
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 29
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 778,240
+Block Count:                46,288
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             md_udc
+Flash FileName:             md_udc.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1120
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 30
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 824,528
+Block Count:                1,024
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             persistent
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x11A4
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 31
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 825,552
+Block Count:                6,144
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             proinfo
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1228
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 32
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 831,696
+Block Count:                204,800
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             md1img
+Flash FileName:             md1img.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x12AC
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 33
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,036,496
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             logo
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1330
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 34
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,052,880
+Block Count:                8,192
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             param
+Flash FileName:             param.bin
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x13B4
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 35
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,061,072
+Block Count:                8,192
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             up_param
+Flash FileName:             up_param.bin
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1438
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 36
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 1,069,264
+Block Count:                98,304
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             persist
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x14BC
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 37
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,167,568
+Block Count:                65,536
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             boot
+Flash FileName:             boot.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1540
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 38
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,233,104
+Block Count:                131,072
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             vendor_boot
+Flash FileName:             vendor_boot.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x15C4
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 39
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,364,176
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             init_boot
+Flash FileName:             init_boot.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1648
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 40
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,380,560
+Block Count:                157,696
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             recovery
+Flash FileName:             recovery.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x16CC
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 41
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,538,256
+Block Count:                128
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             vbmeta_system
+Flash FileName:             vbmeta_system.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1750
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 42
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,538,384
+Block Count:                128
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             vbmeta_vendor
+Flash FileName:             vbmeta_vendor.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x17D4
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 43
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,538,512
+Block Count:                1,024
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             efuse
+Flash FileName:             efuse.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1858
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 44
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,539,536
+Block Count:                560
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             rsv1
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x18DC
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 45
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 1,540,096
+Block Count:                16,384
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             sec1
+Flash FileName:             
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1960
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 46
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 1,556,480
+Block Count:                15,319,040
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             super
+Flash FileName:             super.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x19E4
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 47
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 16,875,520
+Block Count:                1,802,240
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             prism
+Flash FileName:             prism.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1A68
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 48
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 18,677,760
+Block Count:                49,152
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             optics
+Flash FileName:             optics.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1AEC
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 49
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 18,726,912
+Block Count:                409,600
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             cache
+Flash FileName:             cache.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1B70
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 50
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 19,136,512
+Block Count:                102,400
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             omr
+Flash FileName:             omr.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1BF4
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 51
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 19,238,912
+Block Count:                102,400
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             spu
+Flash FileName:             spu.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1C78
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 52
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           5               (FOTA)
+Block Size:                 19,341,312
+Block Count:                
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             userdata
+Flash FileName:             userdata.img
+FOTA FileName:              remained
+
+
+----------------------------------------------------------
+Entry Memory Address: 0x1CFC
+----------------------------------------------------------
+
+Binary Type:                0            (UNKNOWN)
+Device Type:                2                (MMC)
+Identifier:                 73
+Attribute:                  5       (READ / WRITE)
+Update Attribute:           1               (FOTA)
+Block Size:                 61,000,000
+Block Count:                33
+File Offset (Obsolete):     0
+File Size (Obsolete):       0
+Partition Name:             sgpt
+Flash FileName:             sgpt.img
+FOTA FileName:              
+
+
+----------------------------------------------------------
+<<< Pit File End >>>
+----------------------------------------------------------
+
+Generated on: 18/09/2023 16:16:54

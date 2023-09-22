@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mnl_config version="20050701.6.0S.00" type="gps">
+
+    <feature>GLP
+        <version>2.0</version>
+        <config>1</config>
+        <format>Enable</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>CAIC
+        <version>1.0</version>
+        <config>0</config>
+        <format>L1 CAIC FrequencyHz</format>
+        <setting>1560000000</setting>
+        <format>L5 CAIC FrequencyHz</format>
+        <setting>1170000000</setting>
+    </feature>
+
+    <feature>Bluesky
+        <version>1.0</version>
+        <config>1</config>
+        <format>enable:0,disable:1</format>
+        <setting>1</setting>
+    </feature>
+
+    <feature>ClockExt
+        <version>1.0</version>
+        <config>1</config>
+        <format>Enable</format>
+        <setting>1</setting>
+    </feature>
+
+</mnl_config>

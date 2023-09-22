@@ -1,0 +1,20 @@
+# Description: Configuration file for GPS module
+# File path: /data/misc/gps/mnl.prop
+# NLP_enable  0: Disable NLP request,          1: Enable NLP request (default)
+NLP_enable=1
+# Apply RF Loss value
+RfPathLossDb_Ap=5.0
+RfPathLossDb_Up=5.0
+RfPathLossDb_Cp=5.0
+# debug.dbg2file 0: Disable , 1:Enable of gpsdebug.log
+# LOG_MODE 0: BlueMagpie(/sdcard/gps/mtk), 1: FactoryLog(/data/vendor/gps/log)
+debug.dbg2file=1
+LOG_MODE=0
+# bit0: Main switch of NFW visibility and notify mechanism, 0: disable NFW visibility and notify mechanism, always sync location to NFW user
+# bit1: Switch of FW visibility and notify mechanism of GNSS location sycn to NFW user
+# bit2: Switch of FW visibility and notify mechanism of NLP location sync to NFW user
+# bit3: Switch of FW notify positive or negative; 0(default): positive, notify both in NI & SI mode; 1: negative, notify only in NI mode
+# bit4 : 0: Location NFW notify at every location reporting, 1: Location NFW notify once in one session
+NFW_CTRL=11
+# Disable suspend mode to save power consumption
+SUSPEND_ext_available=0

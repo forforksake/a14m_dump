@@ -1,0 +1,83 @@
+on init
+    # Create the mountpoint for mnt/vendor partitions
+    mkdir /mnt/vendor/persist 0771 root root
+    mkdir /mnt/vendor/efs 0771 root root
+    mkdir /mnt/vendor/protect_f 0770 root root
+    mkdir /mnt/vendor/protect_s 0770 root root
+    mkdir /mnt/vendor/nvcfg 0771 root root
+    mkdir /mnt/vendor/nvdata 0771 root root
+
+on post-fs
+    chown system system /mnt/vendor/protect_f
+    restorecon /mnt/vendor/protect_f
+    mount ext4 /dev/block/by-name/protect_f /mnt/vendor/protect_f rw
+
+    chown system system /mnt/vendor/protect_s
+    restorecon /mnt/vendor/protect_s
+    mount ext4 /dev/block/by-name/protect_s /mnt/vendor/protect_s rw
+
+    chown system system /mnt/vendor/efs
+    restorecon /mnt/vendor/efs
+    mount ext4 /dev/block/by-name/efs /mnt/vendor/efs rw
+    restorecon_recursive /mnt/vendor/efs
+
+    chown system system /mnt/vendor/persist
+    #We restorecon /mnt/vendor/persist to set SEPolicy label.
+    restorecon /mnt/vendor/persist
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+
+
+# Gatekeeper & Keys
+on property:hwservicemanager.ready=true & property:ro.crypto.state=encrypted
+    start tz_service
+    setprop vendor.TEEGRIS.loaded true
+    start tzts_service
+    start keystore2
+    start vendor.gatekeeper-1-0
+    start gatekeeper-1-0
+    start vendor.keymint-default
+    start keymint-default
+    start vendor.keymaster-3-0
+    start vendor.keymaster-3-0-trustonic
+    start vendor.keymaster-4-0
+    start vendor.keymaster-4-0-trustonic
+    start vendor.keymaster-4-0-beanpod
+    start vendor.keymaster-4-1
+    start vendor.keymaster-4-1-trustonic
+    start vendor.keymaster-4-1-beanpod
+    start keymaster_attestation-1-1
+    exec_start wait_for_keymaster
+
+on property:twrp.all.users.decrypted=true
+    setprop crypto.ready 0
+    stop vendor.gatekeeper-1-0
+    stop gatekeeper-1-0
+
+service vendor.gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+    interface android.hardware.gatekeeper@1.0::IGatekeeper default
+    class hal
+    user root
+    group system 5678
+    seclabel u:r:recovery:s0
+
+service vendor.keymint-default /vendor/bin/hw/android.hardware.security.keymint-service
+    class early_hal
+    user root
+    group system drmrpc
+    seclabel u:r:recovery:s0
+
+service tz_service /vendor/bin/tzdaemon
+    class core
+    user root
+    group root readproc
+    disabled
+    seclabel u:r:recovery:s0
+
+service tzts_service /vendor/bin/tzts_daemon
+    class core
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+

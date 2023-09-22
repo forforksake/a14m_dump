@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DisplayIssueSettings>
+	<Category name="Problem Scenario">
+		<Actions name="UI Display Abnormal" ui_type="button">
+			<Action cmd_id="set_prop_mdp_log" value="1"/>
+			<Action cmd_id="set_prop_mdp_framechange" value="1"/>
+			<Action cmd_id="set_prop_sf_log_repaint" value="1"/>
+			<Action cmd_id="set_prop_sf_log_transaction" value="1"/>
+			<Action cmd_id="set_prop_hwc_log_v" value="V"/>
+			<Action cmd_id="set_prop_hwc_skip_log" value="1"/>
+			<Action cmd_id="set_prop_hwc_color_transform" value="1"/>
+			<Action cmd_id="set_prop_mobile_on" value="1"/>
+		</Actions>
+		<Actions name="Black/White Screen" ui_type="button">
+			<Action cmd_id="set_prop_hwc_log_v" value="V"/>
+			<Action cmd_id="set_prop_hwc_skip_log" value="1"/>
+			<Action cmd_id="set_prop_hwc_color_transform" value="1"/>
+			<Action cmd_id="set_prop_mobile_on" value="1"/>
+		</Actions>
+		<Actions name="Blurred Screen" ui_type="button">
+			<Action cmd_id="set_prop_mdp_log" value="1"/>
+			<Action cmd_id="set_prop_mdp_framechange" value="1"/>
+			<Action cmd_id="set_prop_mobile_on" value="1"/>
+		</Actions>
+		<Actions name="Flash Screen" ui_type="button">
+			<Action cmd_id="set_prop_mdp_log" value="1"/>
+			<Action cmd_id="set_prop_mdp_framechange" value="1"/>
+		</Actions>
+		<Actions name="Lag" ui_type="button">
+			<Action cmd_id="set_prop_mdp_log" value="1"/>
+			<Action cmd_id="set_prop_mdp_framechange" value="1"/>
+			<Action cmd_id="set_prop_mobile_on" value="1"/>
+			<Action cmd_id="set_prop_fence_on" value="1"/>
+		</Actions>
+		<Actions name="Fixed Screen" ui_type="button">
+			<Action cmd_id="set_prop_mdp_log" value="1"/>
+			<Action cmd_id="set_prop_mdp_framechange" value="1"/>
+		</Actions>
+		<Actions name="CMDQ Timeout" ui_type="button">
+			<Action cmd_id="set_prop_mobile_on" value="1"/>
+			<Action cmd_id="set_prop_irq_on" value="1"/>
+		</Actions>
+	</Category>
+	<Category name="GPU">
+		<Group name="gpud dump" ui_type="default">
+			<Actions name="common dump" ui_type="button">
+				<Action cmd_id="set_prop_enable_GPUD" value="1"/>
+				<Action cmd_id="set_prop_specify_dump_folder" value="/sdcard/gpud_dump/"/>
+				<Action cmd_id="set_prop_specify_process" value=""/>
+				<Action cmd_id="set_prop_dump_framebuffer" value="1"/>
+				<Action cmd_id="set_prop_dump_eglImages" value="1"/>
+				<Action cmd_id="set_prop_dump_AUXImages" value="1"/>
+				<Action cmd_id="set_prop_hack_AUX_output_format" value="1"/>
+				<Action cmd_id="set_command_create_folder" value="1"/>
+			</Actions>
+			
+			<Actions name="GLES state error" ui_type="button">
+				<Action cmd_id="set_prop_enable_GPUD" value="1"/>
+				<Action cmd_id="set_prop_GLES_state_error" value="1"/>
+			</Actions>
+			<Actions name="Dump Gralloc Extra's Info" ui_type="button">
+				<Action cmd_id="set_prop_enable_GPUD" value="1"/>
+				<Action cmd_id="set_prop_dump_extra_info" value="1"/>
+			</Actions>
+			<Actions name="Start Dump" ui_type="notification">
+				<Action cmd_id="set_prop_start_writing_file" value="1"/>
+			</Actions>
+			<Actions name="Stop Dump" ui_type="notification">
+				<Action cmd_id="set_prop_start_writing_file" value="0"/>
+			</Actions>
+		</Group>
+		<Group name="gpud" ui_type="default">
+			<Command id="set_prop_enable_GPUD" name="Enable GPUD" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.gpud.enable" default="0"/>
+			<Command id="set_prop_specify_dump_folder" name="Specify dump folder" ui_type="checkbox" checked="/sdcard/gpud_dump/" unchecked="/sdcard/gpud_dump/" cmd_type="set_property" property="vendor.debug.gpud.folder" default="/sdcard/gpud_dump/"/>
+			<Command id="set_prop_specify_process" name="Specify process" ui_type="checkbox" checked="" unchecked="" cmd_type="set_property" property="vendor.debug.gpud.process.name" default=""/>
+			<Command id="set_prop_dump_framebuffer" name="Dump Framebuffer" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.gpud.wsframebuffer.dump" default="0"/>
+			<Command id="set_prop_dump_eglImages" name="Dump EglImages" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.gpud.extimage.dump" default="0"/>
+			<Command id="set_prop_dump_AUXImages" name="Dump AUXImages" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.gpud.auximage.dump" default="0"/>
+			<Command id="set_prop_hack_AUX_output_format" name="Hack AUX output format" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.gpud.auximage.dstformat" default="0"/>
+			<Command id="set_prop_start_writing_file" name="Start Writing File" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.gpud.fwrite.enable" default="0"/>
+			<Command id="set_prop_GLES_state_error" name="GLES state error" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.gpud.gl.state.error.dump" default="0"/>
+			<Command id="set_prop_dump_extra_info" name="Dump Extra Info" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.gpud.gralloc_extra.log" default="0"/>
+			<Command id="set_command_create_folder" name="Create folder" ui_type="hidden" button_action="adb shell mkdir /sdcard/gpud_dump" cmd_type="adb shell"/>
+			<Command id="set_command_chmod" name="modify folder right" ui_type="hidden" button_action="adb shell chmod 777 /sdcard/gpud_dump" cmd_type="adb shell"/>
+		</Group>
+		<Group name="Action" ui_type="default">
+			<Command id="clear" name="Clear dump" ui_type="button" button_action="delete /sdcard/gpud_dump/" cmd_type="delete"/>
+		</Group>
+		<Group name="" ui_type="default">
+			<Command id="restore" name="Restore All" ui_type="button" button_action="restore" cmd_type="restore"/>
+		</Group>
+	</Category>
+	<Category name="Display">
+		<Group name="Display Driver" ui_type="default">
+			<Command id="set_prop_mobile_on" name="mobile on" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.hwc.mobile_on" default="0"/>
+			<Command id="set_prop_detail_on" name="detail on" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.hwc.detail_on" default="0"/>
+			<Command id="set_prop_fence_on" name="fence on" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.hwc.fence_on" default="0"/>
+			<Command id="set_prop_irq_on" name="irq on" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.hwc.irq_on" default="0"/>
+		</Group>
+		<Group name="SurfaceFlinger" ui_type="default">
+			<Command id="set_prop_sf_log_repaint" name="log repaint" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.sf.log_repaint" default="0"/>
+			<Command id="set_prop_sf_log_transaction" name="log transaction" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.sf.log_transaction" default="0"/>
+		</Group>
+		<Group name="HWComposer" ui_type="default">
+			<Command id="set_prop_hwc_log_v" name="normal log" ui_type="checkbox" checked="V" unchecked="0" cmd_type="set_property" property="persist.vendor.debug.hwc.log" default="0"/>
+			<Command id="set_prop_hwc_skip_log" name="skip log" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.hwc.skip_log" default="0"/>
+			<Command id="set_prop_hwc_color_transform" name="color transform log" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.hwc.color_transform" default="0"/>
+		</Group>
+		<Group name="MDP" ui_type="default">
+			<Command id="set_prop_mdp_log" name="normal log" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.dp.log.enable" default="0"/>
+			<Command id="set_prop_mdp_framechange" name="frame change" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.dp.frameChange.disable" default="0"/>
+			<Command id="restart" name="" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.debug.sf.restart" default="0"/>
+		</Group>
+	</Category>
+	<Category name="Submit And Restart">
+		<Actions name="Submit" ui_type="button">
+			<Action cmd_id="restart" value="1"/>
+		</Actions>
+	</Category>
+</DisplayIssueSettings>

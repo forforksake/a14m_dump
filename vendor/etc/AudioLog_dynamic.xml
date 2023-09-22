@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AudioLogSettings>
+	<Category name="Audio Log">
+		<Actions name="Enable FW all logs" ui_type="button">
+			<Action cmd_id="fw_audiotrack" value="4"/>
+			<Action cmd_id="fw_audioflinger" value="4"/>
+			<Action cmd_id="fw_audiopolicy" value="4"/>
+			<Action cmd_id="fw_audiopolicy_2" value="V"/>
+			<Action cmd_id="audioserver_restart" value="0"/>
+			<Action cmd_id="audioserver_restart" value="1"/>
+		</Actions>
+	</Category>
+	<Category name="Framework Settings">
+		<Group name="" ui_type="default">
+			<Command id="fw_audiotrack" name="AudioTrack" ui_type="list" entries="1,2,3,4,5" cmd_type="set_property" property="vendor.af.track.log" default=""/>
+			<Command id="fw_audioflinger" name="AudioFlinger" ui_type="list" entries="1,2,3,4" cmd_type="set_property" property="vendor.af.audioflinger.log" default=""/>
+			<Command id="fw_audiopolicy" name="AudioPolicy" ui_type="list" entries="1,2,3,4" cmd_type="set_property" property="vendor.af.policy.debug" default=""/>
+			<Command id="fw_audiopolicy_2" name="APM log tag" ui_type="list" entries="I,D,V" cmd_type="set_property" property="log.tag.APM_AudioPolicyManager" default=""/>
+		</Group>
+	</Category>
+	<Category name="">
+		<Group name="" ui_type="default">
+			<Actions name="Restart audioserver" ui_type="button">
+				<Action cmd_id="audioserver_restart" value="0"/>
+				<Action cmd_id="audioserver_restart" value="1"/>
+			</Actions>
+			<Command id="audioserver_restart" name="" ui_type="hidden" cmd_type="set_property" property="vendor.af.audioserver.restart" default="1"/>
+		</Group>
+	</Category>
+</AudioLogSettings>

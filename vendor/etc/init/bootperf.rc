@@ -1,0 +1,81 @@
+#====== Capture Boot Systrace ======
+on early-init && property:ro.boot.boot_trace=1
+   # Configuare ftrace
+   write /sys/kernel/tracing/buffer_size_kb "24576"
+   write /sys/kernel/tracing/trace_options "nooverwrite"
+
+   write /sys/kernel/tracing/events/sched/sched_stat_iowait/enable 1
+   write /sys/kernel/tracing/events/sched/sched_wakeup_new/enable 1
+   write /sys/kernel/tracing/events/sched/sched_blocked_reason/enable 1
+   write /sys/kernel/tracing/events/android_fs/enable 1
+   write /sys/kernel/tracing/events/block/block_rq_issue/enable 1
+   write /sys/kernel/tracing/events/block/block_rq_insert/enable 1
+   write /sys/kernel/tracing/events/block/block_rq_complete/enable 1
+   write /sys/kernel/tracing/events/power/cpu_frequency_limits/enable 1
+
+   # enable mtk events for Legacy kernel
+   write /sys/devices/system/cpu/perf/enable 1
+   write /sys/kernel/tracing/events/mtk_events/perf_index_l/enable 1
+   write /sys/kernel/tracing/events/mtk_events/perf_index_s/enable 1
+
+   setprop debug.atrace.tags.enableflags 0x1fffffe
+
+   #Trace SystemUI App for booting
+   setprop debug.atrace.app_number 1
+   setprop debug.atrace.app_0 "com.android.systemui"
+
+# try to enable mtk events early
+on late-fs && property:ro.boot.boot_trace=1
+   write /sys/devices/system/cpu/perf/enable 1
+   write /sys/kernel/tracing/events/perf_tracker/enable 1
+   write /sys/kernel/tracing/events/scheduler/sched_frequency_limits/enable 1
+
+# enable mtk events
+on post-fs-data && property:ro.boot.boot_trace=1
+   write /sys/devices/system/cpu/perf/enable 1
+   write /sys/kernel/tracing/events/perf_tracker/enable 1
+   write /sys/kernel/tracing/events/scheduler/sched_frequency_limits/enable 1
+
+# atrace.rc disable ftrace on late-init, re-enable ftrace
+on late-init && property:ro.boot.boot_trace=1
+   write /sys/kernel/tracing/tracing_on 1
+
+
+#======  Capture Systrace via property  ======
+on property:persist.vendor.boot_trace=1
+   write /proc/bootprof "Persist boot_trace trigger"
+   write /sys/devices/system/cpu/perf/enable 1
+
+   # enable flags for boot Systrace
+   setprop debug.atrace.tags.enableflags 0x1fffffe
+
+   # enable events
+   write /sys/kernel/tracing/events/power/cpu_frequency/enable 1
+   write /sys/kernel/tracing/events/power/cpu_frequency_limits/enable 1
+   write /sys/kernel/tracing/events/sched/sched_wakeup/enable 1
+   write /sys/kernel/tracing/events/sched/sched_wakeup_new/enable 1
+   write /sys/kernel/tracing/events/sched/sched_switch/enable 1
+   write /sys/kernel/tracing/events/sched/sched_blocked_reason/enable 1
+   write /sys/kernel/tracing/events/mtk_ftrace/enable 1
+   write /sys/kernel/tracing/events/perf_tracker/enable 1
+   write /sys/kernel/tracing/events/android_fs/enable 1
+   write /sys/kernel/tracing/events/block/block_rq_issue/enable 1
+   write /sys/kernel/tracing/events/block/block_rq_insert/enable 1
+   write /sys/kernel/tracing/events/block/block_rq_complete/enable 1
+   write /sys/kernel/tracing/events/workqueue/workqueue_execute_start/enable 1
+   write /sys/kernel/tracing/events/workqueue/workqueue_execute_end/enable 1
+   write /sys/kernel/tracing/events/scheduler/sched_frequency_limits/enable 1
+
+   # Configuare ftrace
+   write /sys/kernel/tracing/buffer_size_kb "24576"
+   write /sys/kernel/tracing/trace_options "nooverwrite"
+   write /sys/kernel/tracing/tracing_on 1
+
+   #Trace SystemUI App for booting
+   setprop debug.atrace.app_number 1
+   setprop debug.atrace.app_0 "com.android.systemui"
+
+on property:sys.boot_completed=* && property:persist.vendor.boot_trace=1
+   #force to disable boot ftrace after boot complete.
+   write /sys/devices/system/cpu/perf/enable 0
+   write /sys/kernel/tracing/tracing_on 0

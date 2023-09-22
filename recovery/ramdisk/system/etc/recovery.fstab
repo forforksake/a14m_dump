@@ -1,0 +1,14 @@
+#<src>                                            <mnt_point>    <type>    <mnt_flags and options>    <fs_mgr_flags>
+system                                             /system	erofs	ro	avb=vbmeta,logical,first_stage_mount
+system                                             /system	f2fs	ro	avb=vbmeta,logical,first_stage_mount
+system                                             /system	ext4	ro	avb=vbmeta,logical,first_stage_mount
+vendor                                             /vendor	erofs	ro	avb,logical,first_stage_mount
+product                                            /product	erofs	ro	avb,logical,first_stage_mount
+odm                                                /odm	erofs	ro	avb,logical,first_stage_mount
+
+/dev/block/platform/bootdevice/by-name/boot        /boot           emmc        defaults
+/dev/block/platform/bootdevice/by-name/recovery    /recovery       emmc        defaults
+/dev/block/platform/bootdevice/by-name/userdata	   /data	       f2fs	       reserve_root=32768,resgid=5678,whint_mode=fs-based,inlinecrypt wait,check,,quota,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption,fscompress
+
+/dev/block/platform/bootdevice/by-name/md_udc	/metadata	ext4               wait,check,formattable
+/dev/block/platform/bootdevice/by-name/misc        /misc           emmc        defaults

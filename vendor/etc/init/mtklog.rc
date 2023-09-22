@@ -1,0 +1,9 @@
+on property:sys.boot_completed=1
+    write /proc/pl_lk "0"
+    write /proc/mtprintk "0"
+    write /proc/mtprintk "3"
+    write /proc/mtprintk ${persist.vendor.uartconsole.enable}
+
+## mtk printk uart controller
+on property:persist.vendor.uartconsole.enable=*
+    write /proc/mtprintk ${persist.vendor.uartconsole.enable}

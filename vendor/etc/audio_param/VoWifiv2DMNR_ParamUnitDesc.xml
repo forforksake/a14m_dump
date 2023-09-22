@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc version="1.1">
+  <CategoryTypeList>
+    <CategoryType name="Profile">
+      <Category name="MagiConference" alias="Normal,HAC,Handset,Handsfree"/>
+    </CategoryType>
+  </CategoryTypeList>
+  <ParamUnit>
+    <Param name="dmnr_para" type="ushort_array">
+    </Param>
+    <Param name="dmnr_para_wb2" type="ushort_array">
+    </Param>
+    <Param name="dmnr_para_swb1" type="ushort_array">
+    </Param>
+    <Param name="dmnr_para_nb1" type="ushort_array">
+    </Param>
+    <Param name="dmnr_para_nb2" type="ushort_array">
+      <!-- DMNR Mode Parameter 0 -->
+      <Field name="NC max band" array_index="0" bit="0,0"                                                         															check_list="0,0-8K,1,0-4K"/>
+      <Field name="ABM Taps" array_index="0" bit="1,1"                                                		        															check_list="0,4taps,1,1tap"/>
+      <Field name="NS Initial Convergence" array_index="0" bit="2,2"                                                 															check_list="0,off,1,on"/>
+      <Field name="VAD hysteresis" array_index="0" bit="3,3"                                         			        															check_list="0,on,1,off"/>
+      <Field name="VAD Adaptive hysteresis" array_index="0" bit="4,4"                                             															check_list="0,on,1,off"/>
+      <Field name="ABM GCC Band range" array_index="0" bit="5,5"          																																			check_list="0,0~7,1,0~3"/>
+      <Field name="NS Less Gain Protection (Normal)" array_index="0" bit="6,8"                            										        					check_list="0,off,1,weakest,2,weaker,3,weak,4,medium,5,strong,6,stronger,7,strongest"/>
+      <Field name="NS Dynamic LB (Normal)" array_index="0" bit="9,10"                                   															check_list="0,off,1,800 ms,2,400 ms,3,200 ms"/>
+      <Field name="NS Dynamic LB (WA)" array_index="0" bit="11,12"                           		        															check_list="0,off,1,800 ms,2,400 ms,3,200 ms"/>
+      <Field name="NS Dynamic LB (Mic2)" array_index="0" bit="13,14"                           					        															check_list="0,off,1,800 ms,2,400 ms,3,200 ms"/>
+      <Field name="Initial Suppression when reset" array_index="0" bit="15,15"                                         			        					check_list="0,off,1,100 ms"/>
+      <!-- DMNR Mode Parameter 1 -->
+      <Field name="TMOS Detection NOISE THD in Mic1" array_index="1" bit="0,7"      																											check_list="0,96,1,16,2,32,3,48,4,64,5,80,6,96,7,112,8,128,9,144,10,160,11,176,12,192,13,208,14,224,15,240,16,256,17,272,18,288,19,304,20,320,21,336,22,352,23,368,24,384,25,400,26,416,27,432,28,448,29,464,30,480,31,496,32,512,33,528,34,544,35,560,36,576,37,592,38,608,39,624,40,640,41,656,42,672,43,688,44,704,45,720,46,736,47,752,48,768,49,784,50,800,51,816,52,832,53,848,54,864,55,880,56,896,57,912,58,928,59,944,60,960,61,976,62,992,63,1008,64,1024,65,1040,66,1056,67,1072,68,1088,69,1104,70,1120,71,1136,72,1152,73,1168,74,1184,75,1200,76,1216,77,1232,78,1248,79,1264,80,1280,81,1296,82,1312,83,1328,84,1344,85,1360,86,1376,87,1392,88,1408,89,1424,90,1440,91,1456,92,1472,93,1488,94,1504,95,1520,96,1536,97,1552,98,1568,99,1584,100,1600,101,1616,102,1632,103,1648,104,1664,105,1680,106,1696,107,1712,108,1728,109,1744,110,1760,111,1776,112,1792,113,1808,114,1824,115,1840,116,1856,117,1872,118,1888,119,1904,120,1920,121,1936,122,1952,123,1968,124,1984,125,2000,126,2016,127,2032,128,2048,129,2064,130,2080,131,2096,132,2112,133,2128,134,2144,135,2160,136,2176,137,2192,138,2208,139,2224,140,2240,141,2256,142,2272,143,2288,144,2304,145,2320,146,2336,147,2352,148,2368,149,2384,150,2400,151,2416,152,2432,153,2448,154,2464,155,2480,156,2496,157,2512,158,2528,159,2544,160,2560,161,2576,162,2592,163,2608,164,2624,165,2640,166,2656,167,2672,168,2688,169,2704,170,2720,171,2736,172,2752,173,2768,174,2784,175,2800,176,2816,177,2832,178,2848,179,2864,180,2880,181,2896,182,2912,183,2928,184,2944,185,2960,186,2976,187,2992,188,3008,189,3024,190,3040,191,3056,192,3072,193,3088,194,3104,195,3120,196,3136,197,3152,198,3168,199,3184,200,3200,201,3216,202,3232,203,3248,204,3264,205,3280,206,3296,207,3312,208,3328,209,3344,210,3360,211,3376,212,3392,213,3408,214,3424,215,3440,216,3456,217,3472,218,3488,219,3504,220,3520,221,3536,222,3552,223,3568,224,3584,225,3600,226,3616,227,3632,228,3648,229,3664,230,3680,231,3696,232,3712,233,3728,234,3744,235,3760,236,3776,237,3792,238,3808,239,3824,240,3840,241,3856,242,3872,243,3888,244,3904,245,3920,246,3936,247,3952,248,3968,249,3984,250,4000,251,4016,252,4032,253,4048,254,4064,255,4080"/>
+      <Field name="TMOS Detection POWER THD in Mic1" array_index="1" bit="8,15"      																											check_list="0,off,1,32,2,64,3,96,4,128,5,160,6,192,7,224,8,256,9,288,10,320,11,352,12,384,13,416,14,448,15,480,16,512,17,544,18,576,19,608,20,640,21,672,22,704,23,736,24,768,25,800,26,832,27,864,28,896,29,928,30,960,31,992,32,1024,33,1056,34,1088,35,1120,36,1152,37,1184,38,1216,39,1248,40,1280,41,1312,42,1344,43,1376,44,1408,45,1440,46,1472,47,1504,48,1536,49,1568,50,1600,51,1632,52,1664,53,1696,54,1728,55,1760,56,1792,57,1824,58,1856,59,1888,60,1920,61,1952,62,1984,63,2016,64,2048,65,2080,66,2112,67,2144,68,2176,69,2208,70,2240,71,2272,72,2304,73,2336,74,2368,75,2400,76,2432,77,2464,78,2496,79,2528,80,2560,81,2592,82,2624,83,2656,84,2688,85,2720,86,2752,87,2784,88,2816,89,2848,90,2880,91,2912,92,2944,93,2976,94,3008,95,3040,96,3072,97,3104,98,3136,99,3168,100,3200,101,3232,102,3264,103,3296,104,3328,105,3360,106,3392,107,3424,108,3456,109,3488,110,3520,111,3552,112,3584,113,3616,114,3648,115,3680,116,3712,117,3744,118,3776,119,3808,120,3840,121,3872,122,3904,123,3936,124,3968,125,4000,126,4032,127,4064,128,4096,129,4128,130,4160,131,4192,132,4224,133,4256,134,4288,135,4320,136,4352,137,4384,138,4416,139,4448,140,4480,141,4512,142,4544,143,4576,144,4608,145,4640,146,4672,147,4704,148,4736,149,4768,150,4800,151,4832,152,4864,153,4896,154,4928,155,4960,156,4992,157,5024,158,5056,159,5088,160,5120,161,5152,162,5184,163,5216,164,5248,165,5280,166,5312,167,5344,168,5376,169,5408,170,5440,171,5472,172,5504,173,5536,174,5568,175,5600,176,5632,177,5664,178,5696,179,5728,180,5760,181,5792,182,5824,183,5856,184,5888,185,5920,186,5952,187,5984,188,6016,189,6048,190,6080,191,6112,192,6144,193,6176,194,6208,195,6240,196,6272,197,6304,198,6336,199,6368,200,6400,201,6432,202,6464,203,6496,204,6528,205,6560,206,6592,207,6624,208,6656,209,6688,210,6720,211,6752,212,6784,213,6816,214,6848,215,6880,216,6912,217,6944,218,6976,219,7008,220,7040,221,7072,222,7104,223,7136,224,7168,225,7200,226,7232,227,7264,228,7296,229,7328,230,7360,231,7392,232,7424,233,7456,234,7488,235,7520,236,7552,237,7584,238,7616,239,7648,240,7680,241,7712,242,7744,243,7776,244,7808,245,7840,246,7872,247,7904,248,7936,249,7968,250,8000,251,8032,252,8064,253,8096,254,8128,255,8160"/>
+      <!-- DMNR Mode Parameter 2 -->
+      <Field name="HR Comb Filter THD" array_index="2" bit="0,1" check_list="0,easist,1,easy,2,hard,3,hardest"/>
+      <Field name="HR Pitch Boost Strength" array_index="2" bit="2,3" check_list="0,strong,1,medium,2,weak,3,off"/>
+      <Field name="HR Comb Filter Strength" array_index="2" bit="4,5" check_list="0,off,1,0-4k weak suppression,2,0-4k strong suppression,3,0-8k strong suppression"/>
+      <Field name="HR Harmonic Clarity Level" array_index="2" bit="6,7" check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="HR HR Peak Protection Strength" array_index="2" bit="8,9" check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="HR Temporal Smooth Strength" array_index="2" bit="10,11" check_list="0,smoothest,1,smooth,2,sharp,3,sharpest"/>
+      <Field name="HR Harmonic Generation Strength" array_index="2" bit="12,13" check_list="0,most harmonics,1,more,2,few,3,fewest"/>
+      <Field name="HR Highband Protection" array_index="2" bit="14,14" check_list="0,off,1,on"/>
+      <Field name="HR 3Quest Mode" array_index="2" bit="15,15" check_list="0,off,1,on"/>
+      <!-- DMNR Mode Parameter 3 -->
+      <Field name="VAD Stricter VAD(Normal)" array_index="3" bit="0,0"          																													check_list="0,on,1,off"/>
+      <Field name="TMOS Status Handover Duration" array_index="3" bit="1,2"      																													check_list="0,200 ms,1,400 ms,2,600 ms,3,800 ms"/>
+      <Field name="TMOS Status Nonstationary noise weight" array_index="3" bit="4,5"      																								check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="TMOS Status NS Strength" array_index="3" bit="6,7"      																																check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="TMOS Status NS Gain LB Harder 10 dB" array_index="3" bit="8,8"      																										check_list="0,off,1,on"/>
+      <Field name="TMOS Status NS 1-mic VAD THD" array_index="3" bit="9,10"      																													check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="TMOS Status Noise Over-estimation" array_index="3" bit="11,12"      																										check_list="0,1.5 dB,1,3 dB,2,4.5 dB,3,6 dB"/>
+      <Field name="TMOS detection" array_index="3" bit="13,13"      																																			check_list="0,off,1,on"/>
+      <Field name="TMOS Status Gain bound" array_index="3" bit="14,15"      																															check_list="0,0 dB,1,3 dB,2,6 dB,3,9 dB"/>
+      <!-- DMNR Mode Parameter 4 -->
+      <Field name="VAD Power Ratio Scaler Modifier" array_index="4" bit="0,15" check_list="0,default(WB normal Cal-data[50]),3000,3000,3500,3500,4000,4000,4500,4500,5000,5000,5500,5500,6000,6000,7000,7000,7500,7500,8000,8000,8500,8500,9000,9000,10000,10000"/>
+      <!-- DMNR Mode Parameter 5 -->
+      <Field name="NS Switch or Gain lowerbound (Low SNR)" array_index="5" bit="0,3"                 																			check_list="0,off,1,2 dB,2,4 dB,3,6 dB,4,8 dB,5,10 dB,6,12 dB,7,14 dB,8,16 dB,9,18 dB,10,20 dB,11,22 dB,12,24 dB,13,26 dB,14,28 dB,15,30 dB"/>
+      <Field name="Low SNR detection THD (noise power)" array_index="5" bit="4,11" check_list="0,0.7dB,1,-21dB,8,-12dB,16,-9dB,50,-4dB,75,-2.3dB,200,1.9dB,250,2.9dB"/>
+      <!-- DMNR Mode Parameter 6 -->
+      <Field name="VAD Band0p5 Power Ratio Scaler Modifier" array_index="6" bit="0,15" check_list="0,default(WB normal Cal-data[40]),1500,1500,1750,1750,2000,2000,2250,2250,2500,2500,2750,2750,3000,3000,3250,3250,3500,3500,3750,3750,4000,4000,4250,4250,4500,4500"/>
+      <!-- DMNR Mode Parameter 7 -->
+      <Field name="NC Disable NC function threshold" array_index="7" bit="0,15"																																		check_list="0,default(600),50,50,70,70,90,90,120,120,150,150,500,500,1000,1000,5000,5000,10000,10000,20000,20000,32767,32767"/>
+      <!-- DMNR Mode Parameter 8 -->
+      <Field name="DMNR Single Mic Minimum Statistics Window Length" array_index="8" bit="1,2"      																											check_list="0,640 ms,1,1280 ms,2,320 ms,3,160 ms"/>
+      <Field name="DMNR Single Mic Likelihood Ratio Test Threshold" array_index="8" bit="3,4"      																												check_list="0,18 dB,1,12 dB,2,9 dB,3,6 dB"/>
+      <Field name="DMNR Single Mic Lowband VAD THD" array_index="8" bit="5,7"      																																				check_list="0,off,1,30000,2,26000,3,22000,4,18000,5,14000,6,10000,7,6000"/>
+      <Field name="DMNR Single Mic Highband VAD THD" array_index="8" bit="8,10"      																																			check_list="0,off,1,30000,2,26000,3,22000,4,18000,5,14000,6,10000,7,6000"/>
+      <Field name="DMNR Single Mic Stationary Noise Tracking speed" array_index="8" bit="11,12"      																											check_list="0,slow,1,medium,2,fast,3,fatest"/>
+      <Field name="DMNR Single Mic Enable Fixed Stationary Noise when NE VAD on" array_index="8" bit="13,13"      																				check_list="0,off,1,on"/>
+      <!-- DMNR Mode Parameter 9 -->
+      <Field name="Magiclarity4 Switch" array_index="9" bit="0,0"      																																										check_list="0,off,1,on"/>
+      <Field name="Magiclarity4 Minimum Statistics Window Length" array_index="9" bit="1,2"      																											check_list="0,640 ms,1,1280 ms,2,320 ms,3,160 ms"/>
+      <Field name="Magiclarity4 Likelihood Ratio Test Threshold" array_index="9" bit="3,4"      																												check_list="0,18 dB,1,12 dB,2,9 dB,3,6 dB"/>
+      <Field name="Magiclarity4 Lowband VAD THD" array_index="9" bit="5,7"      																																				check_list="0,off,1,30000,2,26000,3,22000,4,18000,5,14000,6,10000,7,6000"/>
+      <Field name="Magiclarity4 Highband VAD THD" array_index="9" bit="8,10"      																																			check_list="0,off,1,30000,2,26000,3,22000,4,18000,5,14000,6,10000,7,6000"/>
+      <Field name="Magiclarity4 Stationary Noise Tracking speed" array_index="9" bit="11,12"      																											check_list="0,slow,1,medium,2,fast,3,fatest"/>
+      <Field name="Magiclarity4 Enable Fixed Stationary Noise when NE VAD on" array_index="9" bit="13,13"      																				check_list="0,off,1,on"/>
+      <Field name="Magiclarity4 Enable Fixed Stationary Noise When FE VAD on" array_index="9" bit="14,14"      																				check_list="0,off,1,on"/>
+      <Field name="Magiclarity4 Enable Dynamic MCRA window length" array_index="9" bit="15,15"      																				check_list="0,off,1,on"/>
+      <!-- DMNR Mode Parameter 10 -->
+      <Field name="NS Highband(4-8k) 2-mic VAD THD (Normal)" array_index="10" bit="0,1"               													check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="NS Highband(4-8k) Non-stationary noise suppression strength (Normal)" array_index="10" bit="2,3"             check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="Adaptive Noise Source (Normal)" array_index="10" bit="8,8"      																									check_list="0,mic1 noise,1,mic2 noise"/>
+      <Field name="ABM regularization handover (Normal)" array_index="10" bit="9,10"               													check_list="0,1s,1,2s,2,0.5s,3,0.25s"/>
+      <Field name="VAD ABM VAD THD (Normal)" array_index="10" bit="11,12"             check_list="0,loose,1,medium,2,strict,3,strictest"/>
+      <Field name="NS Noise Over-estimation (Normal)" array_index="10" bit="13,14"               																				check_list="0,1.5dB,1,3dB,2,4.5dB,3,0dB"/>
+      <Field name="NC strength (Normal)" array_index="10" bit="15,15"                                        														check_list="0,strong,1,weak"/>
+      <!-- DMNR Mode Parameter 11 -->
+      <Field name="NS Highband(4-8k) 2-mic VAD THD (WA)" array_index="11" bit="0,1"               													check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="NS Highband(4-8k) Non-stationary noise suppression strength (WA)" array_index="11" bit="2,3"             check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="Adaptive Noise Source (WA)" array_index="11" bit="8,8"      																									check_list="0,mic1 noise,1,mic2 noise"/>
+      <Field name="ABM regularization handover (WA)" array_index="11" bit="9,10"               													check_list="0,1s,1,2s,2,0.5s,3,0.25s"/>
+      <Field name="VAD ABM VAD THD (WA)" array_index="11" bit="11,12"             check_list="0,loose,1,medium,2,strict,3,strictest"/>
+      <Field name="NS Noise Over-estimation (WA)" array_index="11" bit="13,14"               																				check_list="0,1.5dB,1,3dB,2,4.5dB,3,0dB"/>
+      <Field name="NC strength (WA)" array_index="11" bit="15,15"                                        														check_list="0,strong,1,weak"/>
+      <!-- DMNR Mode Parameter 12 -->
+      <Field name="ABM Skip when FE VAD is on" array_index="12" bit="0,0"          																			check_list="0,skip when FE,1,continue when FE"/>
+      <Field name="WA DMNR switch cooldown" array_index="12" bit="1,2"               																				check_list="0,0.5s,1,1s,2,1.5s,3,2s"/>
+      <Field name="WA DMNR Cover Range" array_index="12" bit="3,5"               																				check_list="0,0(prone to WA),1,1,2,2,3,3,4,4,5,5,6,6,7,7(prone to normal)"/>
+      <Field name="WA DMNR Minimal Switch Time" array_index="12" bit="6,7"               																				check_list="0,218.75ms,1,437.5ms,2,875ms,3,1750ms"/>
+      <Field name="ES-NS Gain Integration" array_index="12" bit="8,8"      																				check_list="0,on,1,off"/>
+      <Field name="NC Protection" array_index="12" bit="9,9"      																				check_list="0,off,1,on"/>
+      <Field name="NS Strong DC suppression" array_index="12" bit="10,11"          													        															check_list="0,off,1,93.75 Hz,2,156.25 Hz,3,250 Hz"/>
+      <Field name="NS Highband(4k-8k) speech protection" array_index="12" bit="12,13"               														check_list="0,weak,1,medium,2,medium-strong,3,strong"/>
+      <Field name="VAD Well-cal shadow VAD bias ctrl" array_index="12" bit="14,15"          																													check_list="0,300,1,600,2,1000,3,2000"/>
+      <!-- DMNR Mode Parameter 13 -->
+      <Field name="Normal HR Switch" array_index="13" bit="0,0"  check_list="0,off,1,on"/>
+      <Field name="Normal HR Range of Effect" array_index="13" bit="1,2"  check_list="0,0-8k,1,0-4k,2,0-2k,3,0-1k"/>
+      <Field name="Normal HR Power Compensation Upperbound" array_index="13" bit="3,4"  check_list="0,6dB,1,12dB,2,18dB,3,24dB"/>
+      <Field name="Normal HR Power Compensation Threshold" array_index="13" bit="5,7"  check_list="0,16384,1,21845,2,27306,3,32768,4,38229,5,43690,6,49151,7,54612"/>
+      <Field name="WA HR Switch" array_index="13" bit="8,8"  check_list="0,off,1,on"/>
+      <Field name="WA HR Range of Effect" array_index="13" bit="9,10"  check_list="0,0-8k,1,0-4k,2,0-2k,3,0-1k"/>
+      <Field name="WA HR Power Compensation Upperbound" array_index="13" bit="11,12"  check_list="0,6dB,1,12dB,2,18dB,3,24dB"/>
+      <Field name="WA HR Power Compensation Threshold" array_index="13" bit="13,15"  check_list="0,16384,1,21845,2,27306,3,32768,4,38229,5,43690,6,49151,7,54612"/>
+      <!-- DMNR Mode Parameter 14 -->
+      <Field name="Mic2 HR Switch" array_index="14" bit="0,0"  check_list="0,off,1,on"/>
+      <Field name="Mic2 HR Range of Effect" array_index="14" bit="1,2"  check_list="0,0-8k,1,0-4k,2,0-2k,3,0-1k"/>
+      <Field name="Mic2 HR Power Compensation Upperbound" array_index="14" bit="3,4"  check_list="0,6dB,1,12dB,2,18dB,3,24dB"/>
+      <Field name="Mic2 HR Power Compensation Threshold" array_index="14" bit="5,7"  check_list="0,16384,1,21845,2,27306,3,32768,4,38229,5,43690,6,49151,7,54612"/>
+      <Field name="Far-end HR Switch" array_index="14" bit="8,8"  check_list="0,off,1,on"/>
+      <Field name="Far-end HR Range of Effect" array_index="14" bit="9,10"  check_list="0,0-8k,1,0-4k,2,0-2k,3,0-1k"/>
+      <Field name="Far-end HR Power Compensation Upperbound" array_index="14" bit="11,12"  check_list="0,6dB,1,12dB,2,18dB,3,24dB"/>
+      <Field name="Far-end HR Power Compensation Threshold" array_index="14" bit="13,15"  check_list="0,16384,1,21845,2,27306,3,32768,4,38229,5,43690,6,49151,7,54612"/>
+      <!-- DMNR Mode Parameter 15 -->
+      <!-- DMNR Mode Parameter 16 -->
+      <Field name="GCC BeamProb Delay Index (Normal)" array_index="16" bit="0,1"  check_list="0,off,1,12,2,13,3,14"/>
+      <Field name="GCC BeamProb VAD THD (Normal)" array_index="16" bit="2,3"  check_list="0,1500,1,2000,2,2300,3,2600"/>
+      <Field name="NS Speech Protection Based on PD" array_index="16" bit="4,6"  check_list="0,off,1,strongest,2,stronger,3,strong,4,medium,5,weak,6,weaker,7,weakest"/>
+      <Field name="PD In-speech nonstaionary noise suppression weight" array_index="16" bit="7,8"  check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="Speech Content VAD Time Smoothing" array_index="16" bit="13,13"                                         			        			check_list="0,on,1,off"/>
+      <Field name="Speech Content VAD Minimum Statistics Window Length" array_index="16" bit="14,15"                                         	check_list="0,640 ms,1,1280 ms,2,320 ms,3,160 ms"/>
+
+      <!-- DMNR Mode Parameter 19 -->
+      <Field name="SNRI Expander switch" array_index="19" bit="0"                           																											check_list="0,off,1,on"/>
+      <Field name="SNRI Expander Gain LB" array_index="19" bit="1,3"                           																									check_list="0,9 dB,1,12 dB,2,15 dB,3,18 dB,4,21 dB,5,24 dB,6,27 dB,7,30 dB"/>
+      <Field name="SNRI Expander Gain Under-estimation" array_index="19" bit="4"                           																			check_list="0,6 dB,1,12 dB"/>
+      <Field name="SNRI Expander Triggered THD" array_index="19" bit="5,6"                           																						check_list="0,-30 dB(hardest),1,-28 dB,2,-26 dB,3,-24 dB(easiest)"/>
+      <Field name="SNRI Expander Time Resolution" array_index="19" bit="7,8"                           																						check_list="0,20 ms,1,10 ms,2,5 ms,3,2.5 ms"/>
+      <Field name="SNRI Expander FE Protection Mode" array_index="19" bit="9,10"                           																						check_list="0,strongest,1,strong,2,medium,3,weak"/>
+      <Field name="SNRI Expander 1-mic VAD THD" array_index="19" bit="11,12" check_list="0,16384,1,20480,2,12288,3,8192"/>
+      <!-- DMNR Mode Parameter 20 -->
+      <Field name="NS Gain lowerbound (Mic2)" array_index="20" bit="0,3"                 																			check_list="0,off,1,2 dB,2,4 dB,3,6 dB,4,8 dB,5,10 dB,6,12 dB,7,14 dB,8,16 dB,9,18 dB,10,20 dB,11,22 dB,12,24 dB,13,26 dB,14,28 dB,15,30 dB"/>
+      <Field name="NS Noise Over-estimation (Mic2)" array_index="20" bit="4,5"               																				check_list="0,1.5dB,1,3dB,2,4.5dB,3,0dB"/>
+      <Field name="NS 1-mic VAD THD (Mic2)" array_index="20" bit="6,7"               																				check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="Switch to Mic1 speed THD" array_index="20" bit="8,9"        																																	check_list="0,450 ms,1,225 ms,2,600 ms,3,750 ms"/>
+      <Field name="Switch to Mic2 speed THD" array_index="20" bit="10,11"        																																check_list="0,450 ms,1,225 ms,2,600 ms,3,750 ms"/>
+      <Field name="NS Gain lowerbound (Mic2-TMOS)" array_index="20" bit="12,13"        																				check_list="0,off,1,3 dB,2,6 dB,3,9 dB"/>
+      <Field name="Mic2 direction VAD threshold" array_index="20" bit="14,15"        																														check_list="0,loosest,1,loose,2,strict,3,strictest"/>
+      <!-- DMNR Mode Parameter 21 -->
+      <Field name="Modifier to DMNR adaptive TX gain when mic2" array_index="21" bit="0,3"                 																					check_list="0,0 dB,1,-1 dB,2,-2 dB,3,-3 dB,4,-4 dB,5,-5 dB,6,-6 dB,7,-7 dB,8,0 dB,9,1 dB,10,2 dB,11,3 dB,12,4 dB,13,5 dB,14,6 dB,15,7 dB"/>
+      <Field name="Mic siwtch algorithm 250~750Hz mic1/mic2 energy threshold" array_index="21" bit="4,5"  																			check_list="0,-2 dB,1,-0.06 dB,2,-4 dB,3,-6 dB"/>
+      <Field name="prevent finger touch from selecting to mic1" array_index="21" bit="8,9"  																										check_list="0,off,1,-15 dB,2,-12 dB,3,-10 dB"/>
+      <Field name="Mic2 direction detection" array_index="21" bit="10,10"  																																			check_list="0,on,1,off"/>
+      <Field name="Mic switch algorithm delay control" array_index="21" bit="11,14"                 																						check_list="0,10,1,11,2,12,3,13,4,14,5,15,6,16,7,17,8,18,9,19,10,20,11,21,12,22,13,23,14,24,15,25"/>
+      <Field name="Mic switch PD speed" array_index="21" bit="15,15"  																																					check_list="0,fast,1,slow"/>
+      <!-- DMNR Mode Parameter 22 -->
+      <Field name="TMOS Detection THD in Mic2" array_index="22" bit="0,15"                             																					check_list="0,15000,1500,1500,3000,3000,5000,5000,10000,10000,20000,20000,32767,32767"/>
+      <!-- DMNR Mode Parameter 23 -->
+      <Field name="mic1/mic2 HB range" array_index="23" bit="0,0"  																																							check_list="0,2-4 kHz,1,1-3 kHz"/>
+      <Field name="Mic2 direction VAD enable" array_index="23" bit="1,1"          																															check_list="0,off,1,on"/>
+      <Field name="Mic siwtch algorithm 0~250 Hz mic1/mic2 energy threshold" array_index="23" bit="2,3"   																			check_list="0,-18 dB,1,-13 dB,2,-10 dB,3,off"/>
+      <Field name="DMNR ASLR in noisy signal control" array_index="23" bit="4,4"          																											check_list="0,off,1,on"/>
+      <Field name="Mic2 Blocking algorithm 0~250 Hz mic1 - mic2 energy threshold1" array_index="23" bit="5,6"   																check_list="0,-7.4 dB,1,-8.6 dB,2,-10.4 dB,3,off"/>
+      <Field name="Mic2 Blocking algorithm 0~250 Hz mic1 - mic2 energy threshold2" array_index="23" bit="7,8"   																check_list="0,-3.4 dB,1,-5.2 dB,2,-2.2 dB,3,-1.2 dB"/>
+      <Field name="Switch to mic1 speed THD" array_index="23" bit="9,10"        																																check_list="0,450 ms,1,225 ms,2,300 ms,3,375 ms"/>
+      <Field name="WA Ctrl Switch for Mic2 Blocking" array_index="23" bit="11,11"  																															check_list="0,on,1,off"/>
+      <Field name="Lower bound of MagiNRDual-NS Gain for mic1" array_index="23" bit="12,15"               																			check_list="0,off,1,2 dB,2,4 dB,3,6 dB,4,8 dB,5,10 dB,6,12 dB,7,14 dB,8,16 dB,9,18 dB,10,20 dB,11,22 dB,12,24 dB,13,26 dB,14,28 dB,15,30 dB"/>
+      <!-- DMNR Mode Parameter 24 -->
+      <Field name="Mic siwtch algorithm HB 2k~4k Hz" array_index="24" bit="0,15"        										check_list="0,default(4096 -9 dB),2067,-12 dB,2603,-11 dB,3277,-10 dB,5193,-8 dB,6538,-7 dB,8231,-6 dB,10362,-5 dB,13045,-4 dB,16422,-3 dB,20675,-2 dB,26028,-1 dB"/>
+      <!-- DMNR Mode Parameter 25 -->
+      <Field name="Mic1 or Mic2 band 1 power thd for one-mic VAD" array_index="25" bit="0,15"        																						check_list="0,default(1500 -64.5 dB Fs),500,-69.3 dB Fs,1000,-66.3 dB Fs,2000, -63 dB Fs,3000, -61.5 dB Fs,5000, -59.3 dB Fs,10000, -56.3 dB Fs,20000, -53.3 dB Fs,30000, -51.5 dB Fs"/>
+      <!-- DMNR Mode Parameter 26 -->
+      <Field name="Mic1 high band power threshold" array_index="26" bit="0,15"        																													check_list="0,default(2000 -63 dB Fs),500,-69.3 dB Fs,1000,-66.3 dB Fs,1500, -64.5 dB Fs,3000, -61.5 dB Fs,5000, -59.3 dB Fs,10000, -56.3 dB Fs,20000, -53.3 dB Fs,30000, -51.5 dB Fs"/>
+      <!-- DMNR Mode Parameter 27 -->
+      <Field name="FE VAD thd for mic switch" array_index="27" bit="0,15"        																																check_list="0,0,1500,1500,3000,3000,5000,5000,10000,10000,15000,15000,20000,20000,32767,32767"/>
+      <!-- DMNR Mode Parameter 28 -->
+      <Field name="Mic2 HB thd for mic2 Blocking Switch" array_index="28" bit="0,15"     		check_list="0,-9 dB,2067,-12 dB,2603,-11 dB,3277,-10 dB,5193,-8 dB,6538,-7 dB,8231,-6 dB,10362,-5 dB,13045,-4 dB,16422,-3 dB,20675,-2 dB,26028,-1 dB"/>
+      <!-- DMNR Mode Parameter 29 -->
+      <Field name="Mic2 HB2 thd2 for mic2 Blocking Switch" array_index="29" bit="0,15"     	check_list="0,-5 dB,2067,-12 dB,2603,-11 dB,3277,-10 dB,4096,-9 dB,5193,-8 dB,6538,-7 dB,8231,-6 dB,13045,-4 dB,16422,-3 dB,20675,-2 dB,26028,-1 dB"/>
+      <!-- DMNR Mode Parameter 30 -->
+      <Field name="Mic2 HB Abs Power thd for mic2 Blocking" array_index="30" bit="0,15"     																										check_list="0,-62 dB,5000,-56 dB,10000,-53 dB,20000,-50 dB,32767,-48 dB"/>
+      <!-- DMNR Mode Parameter 31 -->
+      <Field name="Mic1 LB Abs Power thd for mic2 Blocking (250HZ (Band0))" array_index="31" bit="0,15"     																		check_list="0,-56 dB,10000,-53 dB,20000,-50 dB,32767,-48 dB"/>
+      <!-- DMNR Mode Parameter 32 -->
+      <Field name="Mic2 LB Abs Power thd for mic2 Blocking (250HZ (Band0))" array_index="32" bit="0,15"     																		check_list="0,-53 dB,5000,-38 dB,10000,-35 dB,20000,-32 dB,32767,-30 dB"/>
+      <!-- DMNR Mode Parameter 33 -->
+      <Field name="Mic2 LB2 Abs Power thd for mic2 Blocking (250~750 HZ (Band1))" array_index="33" bit="0,15"     															check_list="0,-50 dB,5000,-56 dB,10000,-53 dB,32767,-48 dB"/>
+      <!-- DMNR Mode Parameter 34 -->
+      <Field name="Mic2 FB Abs Power thd for mic2 Blocking (0~8K HZ)" array_index="34" bit="0,15"     																					check_list="0,-53 dB,5000,-56 dB,20000,-50 dB,32767,-48 dB"/>
+      <!-- DMNR Mode Parameter 35 -->
+      <Field name="Stationary Noise Over-estimation for Mic2 Blocking" array_index="35" bit="0,2"     																					check_list="0,1.5dB,1,3dB,2,4.5dB,3,off"/>
+      <!-- DMNR Mode Parameter 36 -->
+      <Field name="Mic2 band0 Power thrshold for mic Selection mic2 band 0 power threshold" array_index="36" bit="0,15"     										check_list="0,default(7500 -39.5 dB),1000,-48.2 dB,3000,-43.5 dB,5000,-41.2 dB,10000,-38.2 dB,20000,-35.2 dB,30000,-33.5 dB"/>
+      <!-- DMNR Mode Parameter 40 -->
+      <Field name="FE VAD thd for VCE" array_index="40" bit="0,15"     																																					check_list="0,0,1500,1500,3000,3000,5000,5000,10000,10000,15000,15000,20000,20000,32767,32767"/>
+    </Param>
+    <Param name="dmnr_para_swb2" type="ushort_array">
+      <!-- DMNR Mode Parameter 44 -->
+      <Field name="LSPK HR Comb Filter THD" array_index="99" bit="0,1" check_list="0,easist,1,easy,2,hard,3,hardest"/>
+      <Field name="LSPK HR Pitch Boost Strength" array_index="99" bit="2,3" check_list="0,strong,1,medium,2,weak,3,off"/>
+      <Field name="LSPK HR Comb Filter Strength" array_index="99" bit="4,5" check_list="0,off,1,0-4k weak suppression,2,0-4k strong suppression,3,0-8k strong suppression"/>
+      <Field name="LSPK HR Harmonic Clarity Level" array_index="99" bit="6,7" check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="LSPK HR HR Peak Protection Strength" array_index="99" bit="8,9" check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <Field name="LSPK HR Temporal Smooth Strength" array_index="99" bit="10,11" check_list="0,smoothest,1,smooth,2,sharp,3,sharpest"/>
+      <Field name="LSPK HR Harmonic Generation Strength" array_index="99" bit="12,13" check_list="0,most harmonics,1,more,2,few,3,fewest"/>
+      <Field name="LSPK HR Highband Protection" array_index="99" bit="14,14" check_list="0,off,1,on"/>
+      <Field name="LSPK HR 3Quest Mode" array_index="99" bit="15,15" check_list="0,off,1,on"/>
+      <!-- DMNR Mode Parameter 45 -->
+      <Field name="LSPK Normal HR Switch" array_index="100" bit="0,0"  check_list="0,off,1,on"/>
+      <Field name="LSPK Normal HR Range of Effect" array_index="100" bit="1,2"  check_list="0,0-8k,1,0-4k,2,0-2k,3,0-1k"/>
+      <Field name="LSPK Normal HR Power Compensation Upperbound" array_index="100" bit="3,4"  check_list="0,6dB,1,12dB,2,18dB,3,24dB"/>
+      <Field name="LSPK Normal HR Power Compensation Threshold" array_index="100" bit="5,7"  check_list="0,16384,1,21845,2,27306,3,32768,4,38229,5,43690,6,49151,7,54612"/>
+      <Field name="LSPK WA HR Switch" array_index="100" bit="8,8"  check_list="0,off,1,on"/>
+      <Field name="LSPK WA HR Range of Effect" array_index="100" bit="9,10"  check_list="0,0-8k,1,0-4k,2,0-2k,3,0-1k"/>
+      <Field name="LSPK WA HR Power Compensation Upperbound" array_index="100" bit="11,12"  check_list="0,6dB,1,12dB,2,18dB,3,24dB"/>
+      <Field name="LSPK WA HR Power Compensation Threshold" array_index="100" bit="13,15"  check_list="0,16384,1,21845,2,27306,3,32768,4,38229,5,43690,6,49151,7,54612"/>
+      <!-- DMNR Mode Parameter 46 -->
+      <Field name="LSPK Mic2 HR Switch" array_index="101" bit="0,0"  check_list="0,off,1,on"/>
+      <Field name="LSPK Mic2 HR Range of Effect" array_index="101" bit="1,2"  check_list="0,0-8k,1,0-4k,2,0-2k,3,0-1k"/>
+      <Field name="LSPK Mic2 HR Power Compensation Upperbound" array_index="101" bit="3,4"  check_list="0,6dB,1,12dB,2,18dB,3,24dB"/>
+      <Field name="LSPK Mic2 HR Power Compensation Threshold" array_index="101" bit="5,7"  check_list="0,16384,1,21845,2,27306,3,32768,4,38229,5,43690,6,49151,7,54612"/>
+      <Field name="LSPK Far-end HR Switch" array_index="101" bit="8,8"  check_list="0,off,1,on"/>
+      <Field name="LSPK Far-end HR Range of Effect" array_index="101" bit="9,10"  check_list="0,0-8k,1,0-4k,2,0-2k,3,0-1k"/>
+      <Field name="LSPK Far-end HR Power Compensation Upperbound" array_index="101" bit="11,12"  check_list="0,6dB,1,12dB,2,18dB,3,24dB"/>
+      <Field name="LSPK Far-end HR Power Compensation Threshold" array_index="101" bit="13,15"  check_list="0,16384,1,21845,2,27306,3,32768,4,38229,5,43690,6,49151,7,54612"/>
+      <!-- DMNR Mode Parameter 47 -->
+      <Field name="LSPK Normal Position Highband (4-8K) NS 2-mic VAD THD" array_index="102" bit="0,1"     																				check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="LSPK Normal Position Highband (4-8K) Nonstationary noise weight when VAD on" array_index="102" bit="2,3"     									check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="LSPK Speech Content VAD Time Smoothing" array_index="102" bit="4,4"     																											check_list="0,off,1,on"/>
+      <Field name="LSPK Speech Content VAD Minimum Statistics Window Length" array_index="102" bit="5,6"     																		check_list="0,640 ms,1,1280 ms,2,320 ms,3,160 ms"/>
+      <Field name="LSPK Noise update during FE VAD on" array_index="102" bit="7,7"     																													check_list="0,on,1,off"/>
+      <Field name="LSPK Less gain much underestimation" array_index="102" bit="8,8"     																													check_list="0,off,1,on"/>
+      <Field name="LSPK Speech direction VAD Frequency Range" array_index="102" bit="9,9"     																										check_list="0,0-4k Hz,1,0-2k Hz"/>
+      <Field name="LSPK Dynamic NS LB in Mic2" array_index="102" bit="10,11"     																																check_list="0,off,1,800 ms,2,400 ms,3,200 ms"/>
+      <Field name="LSPK NS Strong DC suppression" array_index="102" bit="12,13"     																															check_list="0,off,1,93.75 Hz,2,156.25 Hz,3,250 Hz"/>
+      <Field name="LSPK Normal Position Highband (4k-8k)Speech Protection" array_index="102" bit="14,15"     																		check_list="0,weakest,1,medium,2,strong,3,strongest"/>
+      <!-- DMNR Mode Parameter 48 -->
+      <Field name="LSPK ES-NS Gain Integration" array_index="103" bit="0,0"     																																	check_list="0,on,1,off"/>
+      <Field name="LSPK Mic2 Block PD THD" array_index="103" bit="1,2"     																																			check_list="0,20 dB,1,15 dB,2,25 dB,3,30 dB"/>
+      <Field name="LSPK DT Protection" array_index="103" bit="3,3"     																																					check_list="0,on,1,off"/>
+      <Field name="LSPK Mic2-blocking Protection" array_index="103" bit="4,4"     																																check_list="0,on,1,off"/>
+      <Field name="FFT ES cal noise alpha rate(echo)"                         array_index="103" bit="5,5"  																			check_list="0,0.85/0.43,1,0.06"/>
+      <Field name="FFT ES linear echo tracking startup frequency"             array_index="103" bit="6,6"  																			check_list="0,0.5kHz,1,0kHz"/>
+      <Field name="FFT ES low band echo mapping vad level"                    array_index="103" bit="7,8"     																	check_list="0,1,1,3,2,5,3,7"/>
+      <!-- DMNR Mode Parameter 49 -->
+      <Field name="LSPK Switch or lower bound of MagiNRDual-NS Gain in low SNR condition" array_index="104" bit="0,3"               							check_list="0,off,1,2dB,2,4dB,3,6dB,4,8dB,5,10dB,6,12dB,7,14dB,8,16dB,9,18dB,10,20dB,11,22dB,12,24dB,13,26dB,14,28dB,15,30dB"/>
+      <Field name="LSPK Low SNR detection THD" array_index="104" bit="4,11"
+				check_list="0,9830400 (0.7 dB),1,65536 (-21.1 dB),2,131072 (-18.1 dB),3,196608 (-16.3 dB),4,262144 (-15.1 dB),5,327680 (-14.1 dB),6,393216 (-13.3 dB),7,458752 (-12.6 dB),8,524288 (-12.0 dB),9,589824 (-11.5 dB),10,655360 (-11.1 dB),11,720896 (-10.7 dB),12,786432 (-10.3 dB),13,851968 (-9.9 dB),14,917504 (-9.6 dB),15,983040 (-9.3 dB),16,1048576 (-9.0 dB),17,1114112 (-8.8 dB),18,1179648 (-8.5 dB),19,1245184 (-8.3 dB),20,1310720 (-8.1 dB),21,1376256 (-7.8 dB),22,1441792 (-7.6 dB),23,1507328 (-7.5 dB),24,1572864 (-7.3 dB),25,1638400 (-7.1 dB),26,1703936 (-6.9 dB),27,1769472 (-6.8 dB),28,1835008 (-6.6 dB),29,1900544 (-6.4 dB),30,1966080 (-6.3 dB),31,2031616 (-6.2 dB),32,2097152 (-6.0 dB),33,2162688 (-5.9 dB),34,2228224 (-5.8 dB),35,2293760 (-5.6 dB),36,2359296 (-5.5 dB),37,2424832 (-5.4 dB),38,2490368 (-5.3 dB),39,2555904 (-5.2 dB),40,2621440 (-5.1 dB),41,2686976 (-4.9 dB),42,2752512 (-4.8 dB),43,2818048 (-4.7 dB),44,2883584 (-4.6 dB),45,2949120 (-4.5 dB),46,3014656 (-4.4 dB),47,3080192 (-4.4 dB),48,3145728 (-4.3 dB),49,3211264 (-4.2 dB),50,3276800 (-4.1 dB),51,3342336 (-4.0 dB),52,3407872 (-3.9 dB),53,3473408 (-3.8 dB),54,3538944 (-3.7 dB),55,3604480 (-3.7 dB),56,3670016 (-3.6 dB),57,3735552 (-3.5 dB),58,3801088 (-3.4 dB),59,3866624 (-3.4 dB),60,3932160 (-3.3 dB),61,3997696 (-3.2 dB),62,4063232 (-3.1 dB),63,4128768 (-3.1 dB),64,4194304 (-3.0 dB),65,4259840 (-2.9 dB),66,4325376 (-2.9 dB),67,4390912 (-2.8 dB),68,4456448 (-2.7 dB),69,4521984 (-2.7 dB),70,4587520 (-2.6 dB),71,4653056 (-2.6 dB),72,4718592 (-2.5 dB),73,4784128 (-2.4 dB),74,4849664 (-2.4 dB),75,4915200 (-2.3 dB),76,4980736 (-2.3 dB),77,5046272 (-2.2 dB),78,5111808 (-2.2 dB),79,5177344 (-2.1 dB),80,5242880 (-2.0 dB),81,5308416 (-2.0 dB),82,5373952 (-1.9 dB),83,5439488 (-1.9 dB),84,5505024 (-1.8 dB),85,5570560 (-1.8 dB),86,5636096 (-1.7 dB),87,5701632 (-1.7 dB),88,5767168 (-1.6 dB),89,5832704 (-1.6 dB),90,5898240 (-1.5 dB),91,5963776 (-1.5 dB),92,6029312 (-1.4 dB),93,6094848 (-1.4 dB),94,6160384 (-1.3 dB),95,6225920 (-1.3 dB),96,6291456 (-1.2 dB),97,6356992 (-1.2 dB),98,6422528 (-1.2 dB),99,6488064 (-1.1 dB),100,6553600 (-1.1 dB),101,6619136 (-1.0 dB),102,6684672 (-1.0 dB),103,6750208 (-0.9 dB),104,6815744 (-0.9 dB),105,6881280 (-0.9 dB),106,6946816 (-0.8 dB),107,7012352 (-0.8 dB),108,7077888 (-0.7 dB),109,7143424 (-0.7 dB),110,7208960 (-0.7 dB),111,7274496 (-0.6 dB),112,7340032 (-0.6 dB),113,7405568 (-0.5 dB),114,7471104 (-0.5 dB),115,7536640 (-0.5 dB),116,7602176 (-0.4 dB),117,7667712 (-0.4 dB),118,7733248 (-0.4 dB),119,7798784 (-0.3 dB),120,7864320 (-0.3 dB),121,7929856 (-0.2 dB),122,7995392 (-0.2 dB),123,8060928 (-0.2 dB),124,8126464 (-0.1 dB),125,8192000 (-0.1 dB),126,8257536 (-0.1 dB),127,8323072 (-0.0 dB),128,8388608 (0.0 dB),129,8454144 (0.0 dB),130,8519680 (0.1 dB),131,8585216 (0.1 dB),132,8650752 (0.1 dB),133,8716288 (0.2 dB),134,8781824 (0.2 dB),135,8847360 (0.2 dB),136,8912896 (0.3 dB),137,8978432 (0.3 dB),138,9043968 (0.3 dB),139,9109504 (0.4 dB),140,9175040 (0.4 dB),141,9240576 (0.4 dB),142,9306112 (0.5 dB),143,9371648 (0.5 dB),144,9437184 (0.5 dB),145,9502720 (0.5 dB),146,9568256 (0.6 dB),147,9633792 (0.6 dB),148,9699328 (0.6 dB),149,9764864 (0.7 dB),150,9830400 (0.7 dB),151,9895936 (0.7 dB),152,9961472 (0.7 dB),153,10027008 (0.8 dB),154,10092544 (0.8 dB),155,10158080 (0.8 dB),156,10223616 (0.9 dB),157,10289152 (0.9 dB),158,10354688 (0.9 dB),159,10420224 (0.9 dB),160,10485760 (1.0 dB),161,10551296 (1.0 dB),162,10616832 (1.0 dB),163,10682368 (1.0 dB),164,10747904 (1.1 dB),165,10813440 (1.1 dB),166,10878976 (1.1 dB),167,10944512 (1.2 dB),168,11010048 (1.2 dB),169,11075584 (1.2 dB),170,11141120 (1.2 dB),171,11206656 (1.3 dB),172,11272192 (1.3 dB),173,11337728 (1.3 dB),174,11403264 (1.3 dB),175,11468800 (1.4 dB),176,11534336 (1.4 dB),177,11599872 (1.4 dB),178,11665408 (1.4 dB),179,11730944 (1.5 dB),180,11796480 (1.5 dB),181,11862016 (1.5 dB),182,11927552 (1.5 dB),183,11993088 (1.6 dB),184,12058624 (1.6 dB),185,12124160 (1.6 dB),186,12189696 (1.6 dB),187,12255232 (1.6 dB),188,12320768 (1.7 dB),189,12386304 (1.7 dB),190,12451840 (1.7 dB),191,12517376 (1.7 dB),192,12582912 (1.8 dB),193,12648448 (1.8 dB),194,12713984 (1.8 dB),195,12779520 (1.8 dB),196,12845056 (1.9 dB),197,12910592 (1.9 dB),198,12976128 (1.9 dB),199,13041664 (1.9 dB),200,13107200 (1.9 dB),201,13172736 (2.0 dB),202,13238272 (2.0 dB),203,13303808 (2.0 dB),204,13369344 (2.0 dB),205,13434880 (2.0 dB),206,13500416 (2.1 dB),207,13565952 (2.1 dB),208,13631488 (2.1 dB),209,13697024 (2.1 dB),210,13762560 (2.2 dB),211,13828096 (2.2 dB),212,13893632 (2.2 dB),213,13959168 (2.2 dB),214,14024704 (2.2 dB),215,14090240 (2.3 dB),216,14155776 (2.3 dB),217,14221312 (2.3 dB),218,14286848 (2.3 dB),219,14352384 (2.3 dB),220,14417920 (2.4 dB),221,14483456 (2.4 dB),222,14548992 (2.4 dB),223,14614528 (2.4 dB),224,14680064 (2.4 dB),225,14745600 (2.4 dB),226,14811136 (2.5 dB),227,14876672 (2.5 dB),228,14942208 (2.5 dB),229,15007744 (2.5 dB),230,15073280 (2.5 dB),231,15138816 (2.6 dB),232,15204352 (2.6 dB),233,15269888 (2.6 dB),234,15335424 (2.6 dB),235,15400960 (2.6 dB),236,15466496 (2.7 dB),237,15532032 (2.7 dB),238,15597568 (2.7 dB),239,15663104 (2.7 dB),240,15728640 (2.7 dB),241,15794176 (2.7 dB),242,15859712 (2.8 dB),243,15925248 (2.8 dB),244,15990784 (2.8 dB),245,16056320 (2.8 dB),246,16121856 (2.8 dB),247,16187392 (2.9 dB),248,16252928 (2.9 dB),249,16318464 (2.9 dB),250,16384000 (2.9 dB),251,16449536 (2.9 dB),252,16515072 (2.9 dB),253,16580608 (3.0 dB),254,16646144 (3.0 dB),255,16711680 (3.0 dB)"/>
+      <Field name="LSPK Noise overestimation ot underestimation in low SNR condition" array_index="104" bit="12,14"               								check_list="0,1.5 dB,1,3 dB,2,4.5 dB,3,0 dB,4,-1.5 dB,5,-3 dB,6,-4.5 dB,7,-6 dB"/>
+      <Field name="LSPK Single-Mic mode in low SNR condition" array_index="104" bit="15,15"               																				check_list="0,off,1,on"/>
+      <!-- DMNR Mode Parameter 51 -->
+      <Field name="LSPK Minimum Statistics Window Length" array_index="106" bit="0,1"      																											check_list="0,640 ms,1,1280 ms,2,320 ms,3,160 ms"/>
+      <Field name="LSPK Likelihood Ratio Test Threshold" array_index="106" bit="2,3"      																												check_list="0,18 dB,1,12 dB,2,9 dB,3,6 dB"/>
+      <Field name="LSPK Lowband VAD THD" array_index="106" bit="4,6"      																																				check_list="0,off,1,30000,2,26000,3,22000,4,18000,5,14000,6,10000,7,6000"/>
+      <Field name="LSPK Highband VAD THD" array_index="106" bit="7,9"      																																			check_list="0,off,1,30000,2,26000,3,22000,4,18000,5,14000,6,10000,7,6000"/>
+      <Field name="LSPK Stationary Noise Tracking speed" array_index="106" bit="10,11"      																											check_list="0,slow,1,medium,2,fast,3,fatest"/>
+      <Field name="LSPK Enable Fixed Stationary Noise when NE VAD on" array_index="106" bit="12,12"      																				check_list="0,off,1,on"/>
+      <!-- DMNR Mode Parameter 52 -->
+      <Field name="LSPK Mic1 or Mic2 Full band power thd for 1-mic VAD" array_index="107" bit="0,15"     																				check_list="0,1500,2000,2000,3000,3000,5000,5000,10000,10000,15000,15000,20000,20000,32767,32767"/>
+      <!-- DMNR Mode Parameter 53 -->
+      <Field name="LSPK TMOS Status Handover Duration" array_index="108" bit="1,2"      																													check_list="0,200 ms,1,400 ms,2,600 ms,3,800 ms"/>
+      <Field name="LSPK TMOS Status Nonstationary noise weight" array_index="108" bit="4,5"      																								check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="LSPK TMOS Status NS Strength" array_index="108" bit="6,7"      																																check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="LSPK TMOS Status NS Gain LB Harder 10 dB" array_index="108" bit="8,8"      																										check_list="0,off,1,on"/>
+      <Field name="LSPK TMOS Status NS 1-mic VAD THD" array_index="108" bit="9,10"      																													check_list="0,lowest,1,low,2,medium,3,highest"/>
+      <Field name="LSPK TMOS Status Noise Over-estimation" array_index="108" bit="11,12" check_list="0,1.5 dB,1,3 dB,2,4.5 dB,3,off"/>
+      <Field name="LSPK TMOS detection" array_index="108" bit="13,13"      																																			check_list="0,off,1,on"/>
+      <Field name="LSPK TMOS Status Gain bound" array_index="108" bit="14,15"      																															check_list="0,0 dB,1,3 dB,2,6 dB,3,9 dB"/>
+      <!-- DMNR Mode Parameter 54 -->
+      <Field name="LSPK TMOS Detection NOISE THD in Mic1" array_index="109" bit="0,7"      																											check_list="0,96,1,16,2,32,3,48,4,64,5,80,6,96,7,112,8,128,9,144,10,160,11,176,12,192,13,208,14,224,15,240,16,256,17,272,18,288,19,304,20,320,21,336,22,352,23,368,24,384,25,400,26,416,27,432,28,448,29,464,30,480,31,496,32,512,33,528,34,544,35,560,36,576,37,592,38,608,39,624,40,640,41,656,42,672,43,688,44,704,45,720,46,736,47,752,48,768,49,784,50,800,51,816,52,832,53,848,54,864,55,880,56,896,57,912,58,928,59,944,60,960,61,976,62,992,63,1008,64,1024,65,1040,66,1056,67,1072,68,1088,69,1104,70,1120,71,1136,72,1152,73,1168,74,1184,75,1200,76,1216,77,1232,78,1248,79,1264,80,1280,81,1296,82,1312,83,1328,84,1344,85,1360,86,1376,87,1392,88,1408,89,1424,90,1440,91,1456,92,1472,93,1488,94,1504,95,1520,96,1536,97,1552,98,1568,99,1584,100,1600,101,1616,102,1632,103,1648,104,1664,105,1680,106,1696,107,1712,108,1728,109,1744,110,1760,111,1776,112,1792,113,1808,114,1824,115,1840,116,1856,117,1872,118,1888,119,1904,120,1920,121,1936,122,1952,123,1968,124,1984,125,2000,126,2016,127,2032,128,2048,129,2064,130,2080,131,2096,132,2112,133,2128,134,2144,135,2160,136,2176,137,2192,138,2208,139,2224,140,2240,141,2256,142,2272,143,2288,144,2304,145,2320,146,2336,147,2352,148,2368,149,2384,150,2400,151,2416,152,2432,153,2448,154,2464,155,2480,156,2496,157,2512,158,2528,159,2544,160,2560,161,2576,162,2592,163,2608,164,2624,165,2640,166,2656,167,2672,168,2688,169,2704,170,2720,171,2736,172,2752,173,2768,174,2784,175,2800,176,2816,177,2832,178,2848,179,2864,180,2880,181,2896,182,2912,183,2928,184,2944,185,2960,186,2976,187,2992,188,3008,189,3024,190,3040,191,3056,192,3072,193,3088,194,3104,195,3120,196,3136,197,3152,198,3168,199,3184,200,3200,201,3216,202,3232,203,3248,204,3264,205,3280,206,3296,207,3312,208,3328,209,3344,210,3360,211,3376,212,3392,213,3408,214,3424,215,3440,216,3456,217,3472,218,3488,219,3504,220,3520,221,3536,222,3552,223,3568,224,3584,225,3600,226,3616,227,3632,228,3648,229,3664,230,3680,231,3696,232,3712,233,3728,234,3744,235,3760,236,3776,237,3792,238,3808,239,3824,240,3840,241,3856,242,3872,243,3888,244,3904,245,3920,246,3936,247,3952,248,3968,249,3984,250,4000,251,4016,252,4032,253,4048,254,4064,255,4080"/>
+      <Field name="LSPK TMOS Detection POWER THD in Mic1" array_index="109" bit="8,15"      																											check_list="0,off,1,32,2,64,3,96,4,128,5,160,6,192,7,224,8,256,9,288,10,320,11,352,12,384,13,416,14,448,15,480,16,512,17,544,18,576,19,608,20,640,21,672,22,704,23,736,24,768,25,800,26,832,27,864,28,896,29,928,30,960,31,992,32,1024,33,1056,34,1088,35,1120,36,1152,37,1184,38,1216,39,1248,40,1280,41,1312,42,1344,43,1376,44,1408,45,1440,46,1472,47,1504,48,1536,49,1568,50,1600,51,1632,52,1664,53,1696,54,1728,55,1760,56,1792,57,1824,58,1856,59,1888,60,1920,61,1952,62,1984,63,2016,64,2048,65,2080,66,2112,67,2144,68,2176,69,2208,70,2240,71,2272,72,2304,73,2336,74,2368,75,2400,76,2432,77,2464,78,2496,79,2528,80,2560,81,2592,82,2624,83,2656,84,2688,85,2720,86,2752,87,2784,88,2816,89,2848,90,2880,91,2912,92,2944,93,2976,94,3008,95,3040,96,3072,97,3104,98,3136,99,3168,100,3200,101,3232,102,3264,103,3296,104,3328,105,3360,106,3392,107,3424,108,3456,109,3488,110,3520,111,3552,112,3584,113,3616,114,3648,115,3680,116,3712,117,3744,118,3776,119,3808,120,3840,121,3872,122,3904,123,3936,124,3968,125,4000,126,4032,127,4064,128,4096,129,4128,130,4160,131,4192,132,4224,133,4256,134,4288,135,4320,136,4352,137,4384,138,4416,139,4448,140,4480,141,4512,142,4544,143,4576,144,4608,145,4640,146,4672,147,4704,148,4736,149,4768,150,4800,151,4832,152,4864,153,4896,154,4928,155,4960,156,4992,157,5024,158,5056,159,5088,160,5120,161,5152,162,5184,163,5216,164,5248,165,5280,166,5312,167,5344,168,5376,169,5408,170,5440,171,5472,172,5504,173,5536,174,5568,175,5600,176,5632,177,5664,178,5696,179,5728,180,5760,181,5792,182,5824,183,5856,184,5888,185,5920,186,5952,187,5984,188,6016,189,6048,190,6080,191,6112,192,6144,193,6176,194,6208,195,6240,196,6272,197,6304,198,6336,199,6368,200,6400,201,6432,202,6464,203,6496,204,6528,205,6560,206,6592,207,6624,208,6656,209,6688,210,6720,211,6752,212,6784,213,6816,214,6848,215,6880,216,6912,217,6944,218,6976,219,7008,220,7040,221,7072,222,7104,223,7136,224,7168,225,7200,226,7232,227,7264,228,7296,229,7328,230,7360,231,7392,232,7424,233,7456,234,7488,235,7520,236,7552,237,7584,238,7616,239,7648,240,7680,241,7712,242,7744,243,7776,244,7808,245,7840,246,7872,247,7904,248,7936,249,7968,250,8000,251,8032,252,8064,253,8096,254,8128,255,8160"/>
+      <!-- DMNR Common -->
+      <Field name="Noise type detection NB switch" array_index="0" bit="0,0"  																																		check_list="0,off,1,on"/>
+      <Field name="Noise type detection WB switch" array_index="0" bit="1,1"  																																		check_list="0,off,1,on"/>
+      <Field name="Noise type detection rejection THD" array_index="0" bit="9,10"  																															check_list="0,lowest,1,lower,2,stronger,3,strongest"/>
+      <Field name="Noise type detection detection confidence THD" array_index="0" bit="11,12"  																									check_list="0,loosest,1,looser,2,stricter,3,strictest"/>
+      <Field name="Noise type detection detection speed" array_index="0" bit="13,14"  																													check_list="0,slowest,1,slower,2,faster,3,fastest"/>
+      <Field name="Noise type detection using default model" array_index="0" bit="15,15"  																													check_list="0,on,1,off"/>
+      <Field name="Noise type specialization enable at speechband(pub)" array_index="1" bit="0,0"  																								check_list="0,off,1,on"/>
+      <Field name="Noise type specialization VAD THD offset at speechband(pub)" array_index="1" bit="1,4"  																			check_list="0,off,1,+500,2,+1000,3,+1500,4,+2000,5,+2500,6,+3000,7,+3500,9,-500,10,-1000,11,-1500,12,-2000,13,-2500,14,-3000,15,-3500"/>
+      <Field name="Noise type specialization Gain LB offset at speechband(pub)" array_index="1" bit="5,8"  																			check_list="0,off,1,-2 dB,2,-4 dB,3,-6 dB,4,-8 dB,5,-10 dB,6,-12 dB,7,-14 dB,9,2 dB,10,4 dB,11,6 dB,12,8 dB,13,10 dB,14,12 dB,15,14 dB"/>
+      <Field name="Noise type specialization PD VAD tolerance at speechband(pub)" array_index="1" bit="9,12"  																	check_list="0,off,1,1 dB,2,2 dB,3,3 dB,4,4 dB,5,5 dB,6,6 dB,7,7 dB,9,-1 dB,10,-2 dB,11,-3 dB,12,-4 dB,13,-5 dB,14,-6 dB,15,-7 dB"/>
+      <Field name="Noise type specialization enable at midband(road,corssroad,train)" array_index="2" bit="0,0"  																	check_list="0,off,1,on"/>
+      <Field name="Noise type specialization VAD THD offset at midband(road,corssroad,train)" array_index="2" bit="1,4"  												check_list="0,off,1,+500,2,+1000,3,+1500,4,+2000,5,+2500,6,+3000,7,+3500,9,-500,10,-1000,11,-1500,12,-2000,13,-2500,14,-3000,15,-3500"/>
+      <Field name="Noise type specialization Gain LB offset at midband(road,corssroad,train)" array_index="2" bit="5,8"  												check_list="0,off,1,-2 dB,2,-4 dB,3,-6 dB,4,-8 dB,5,-10 dB,6,-12 dB,7,-14 dB,9,2 dB,10,4 dB,11,6 dB,12,8 dB,13,10 dB,14,12 dB,15,14 dB"/>
+      <Field name="Noise type specialization PD VAD tolerance at midband(road,corssroad,train)" array_index="2" bit="9,12"  										check_list="0,off,1,1 dB,2,2 dB,3,3 dB,4,4 dB,5,5 dB,6,6 dB,7,7 dB,9,-1 dB,10,-2 dB,11,-3 dB,12,-4 dB,13,-5 dB,14,-6 dB,15,-7 dB"/>
+      <Field name="Noise type specialization enable at lowband(car)" array_index="3" bit="0,0"  																									check_list="0,off,1,on"/>
+      <Field name="Noise type specialization VAD THD offset at lowband(car)" array_index="3" bit="1,4"  																				check_list="0,off,1,+500,2,+1000,3,+1500,4,+2000,5,+2500,6,+3000,7,+3500,9,-500,10,-1000,11,-1500,12,-2000,13,-2500,14,-3000,15,-3500"/>
+      <Field name="Noise type specialization Gain LB offset at lowband(car)" array_index="3" bit="5,8"  																				check_list="0,off,1,-2 dB,2,-4 dB,3,-6 dB,4,-8 dB,5,-10 dB,6,-12 dB,7,-14 dB,9,2 dB,10,4 dB,11,6 dB,12,8 dB,13,10 dB,14,12 dB,15,14 dB"/>
+      <Field name="Noise type specialization PD VAD tolerance at lowband(car)" array_index="3" bit="9,12"  																			check_list="0,off,1,1 dB,2,2 dB,3,3 dB,4,4 dB,5,5 dB,6,6 dB,7,7 dB,9,-1 dB,10,-2 dB,11,-3 dB,12,-4 dB,13,-5 dB,14,-6 dB,15,-7 dB"/>
+      <Field name="Noise type specialization enable at high-SNR(cafe,mensa,callcenter)" array_index="4" bit="0,0"  																check_list="0,off,1,on"/>
+      <Field name="Noise type specialization VAD THD offset at high-SNR(cafe,mensa,callcenter)" array_index="4" bit="1,4"  											check_list="0,off,1,+500,2,+1000,3,+1500,4,+2000,5,+2500,6,+3000,7,+3500,9,-500,10,-1000,11,-1500,12,-2000,13,-2500,14,-3000,15,-3500"/>
+      <Field name="Noise type specialization Gain LB offset at high-SNR(cafe,mensa,callcenter)" array_index="4" bit="5,8"  											check_list="0,off,1,-2 dB,2,-4 dB,3,-6 dB,4,-8 dB,5,-10 dB,6,-12 dB,7,-14 dB,9,2 dB,10,4 dB,11,6 dB,12,8 dB,13,10 dB,14,12 dB,15,14 dB"/>
+      <Field name="Noise type specialization PD VAD tolerance at high-SNR(cafe,mensa,callcenter)" array_index="4" bit="9,12"  									check_list="0,off,1,1 dB,2,2 dB,3,3 dB,4,4 dB,5,5 dB,6,6 dB,7,7 dB,9,-1 dB,10,-2 dB,11,-3 dB,12,-4 dB,13,-5 dB,14,-6 dB,15,-7 dB"/>
+      <!-- DMNR Mode Parameter 55 -->
+      <Field name="FFT ES 0.5-1k residual echo linear weight"  array_index="110" bit="0,2"  																														 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 1-2k residual echo linear weight"    array_index="110" bit="3,5"  																														 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 2-4k residual echo linear weight"    array_index="110" bit="6,8"  																														 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 4-8k residual echo linear weight"    array_index="110" bit="9,11"  																													 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES N power smooth THD"                  array_index="110" bit="12,13"  																													 check_list="0,14000,1,17000,2,20000,3,23000"/>
+      <Field name="FFT ES echo mapping vad level"              array_index="110" bit="14,15"  																													 check_list="0,0,1,1,2,3,3,5"/>
+      <!-- DMNR Mode Parameter 56 -->
+      <Field name="FFT ES 0.5-1k residual echo non linear weight"  array_index="111" bit="0,2"  																												 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 1-2k residual echo non linear weight"    array_index="111" bit="3,5"  																												 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 2-4k residual echo non linear weight"    array_index="111" bit="6,8"  																												 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 4-8k residual echo non linear weight"    array_index="111" bit="9,11"  																											 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES nonlinear echo startup THD"              array_index="111" bit="12,13"  																										 check_list="0,0,1,2000,2,3000,3,5000"/>
+      <Field name="FFT ES comb filter echo THD"                    array_index="111" bit="14,15"  																											 check_list="0,1200,1,1500,2,1800,3,2100"/>
+      <!-- DMNR Mode Parameter 57 -->
+      <Field name="FFT ES under estimate THD"  									array_index="112" bit="0,1"  																													 check_list="0,50,1,150,2,200,3,250"/>
+      <Field name="FFT ES under estimate range"    							array_index="112" bit="2,3"  																													 check_list="0,50,1,100,2,150,3,200"/>
+      <Field name="FFT ES under estimate switch"    						array_index="112" bit="4,4"  																													 check_list="0,on,1,off"/>
+      <Field name="FFT AES observe band 0 switch"    						array_index="112" bit="5,5"  																													 check_list="0,on,1,off"/>
+      <Field name="FFT ES cem value THD"                  			array_index="112" bit="6,7"  																													 check_list="0,1500,1,2000,2,2500,3,3000"/>
+      <Field name="FFT ES gain lower bound switch"              array_index="112" bit="8,8"  																													 check_list="0,off,1,on"/>
+      <Field name="FFT ES initial coefficient"                  array_index="112" bit="9,10"  																													 check_list="0,off,1,1-mic LSPK,2,2-mic LSPK,3,1-mic LSPK"/>
+      <Field name="FFT ES nonlinear echo tracking switch"       array_index="112" bit="11,11"  																													 check_list="0,off,1,on"/>
+      <Field name="FFT ES nonlinear echo start frequency"  			array_index="112" bit="12,13"  																													 check_list="0,2kHz,1,3kHz,2,4kHz,3,5kHz"/>
+      <Field name="FFT ES nonlinear echo end frequency"  			  array_index="112" bit="14,15"  																													 check_list="0,4kHz,1,5kHz,2,6kHz,3,7kHz"/>
+      <!-- DMNR Mode Parameter 58 -->
+      <Field name="FFT ES 0-0.5k residual echo linear weight"        array_index="113" bit="0,2"  																											 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 0-0.5k residual echo non linear weight"    array_index="113" bit="3,5"  																											 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 8-16k residual echo linear weight"        array_index="113" bit="6,8"  																											   check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES 8-16k residual echo non linear weight"    array_index="113" bit="9,11"  																											 check_list="0,0,1,2,2,4,3,8,4,16,5,32,6,64,7,128"/>
+      <Field name="FFT ES HR apply power THD"  									    array_index="113" bit="12,13"  																											 check_list="0,100,1,300,2,600,3,1000"/>
+      <Field name="FFT ES HR cal gain mode"                         array_index="113" bit="14,14"  																											 check_list="0,aggressive,1,smooth"/>
+      <Field name="FFT ES NS tracking echo source"                  array_index="113" bit="15,15"  																											 check_list="0,estimate echo,1,ref signal"/>
+    </Param>
+    <Param name="sph_in_iir_enh_eq_freq" type="double_array"/>
+    <Param name="sph_out_iir_enh_eq_freq" type="double_array"/>
+    <Param name="sph_in_iir_enh_eq_mag" type="double_array"/>
+    <Param name="sph_out_iir_enh_eq_mag" type="double_array"/>
+    <Param name="sph_in_iir_enh_pmv_gain" type="double_array"/>
+    <Param name="sph_out_iir_enh_pmv_gain" type="double_array"/>
+    <Param name="sph_in_iir_enh_pmv_freq" type="double_array"/>
+    <Param name="sph_out_iir_enh_pmv_freq" type="double_array"/>
+    <Param name="sph_in_iir_enh_pmv_type" type="ushort_array"/>
+    <Param name="sph_out_iir_enh_pmv_type" type="ushort_array"/>
+    <Param name="sph_in_iir_enh_pmv_qfactor" type="double_array"/>
+    <Param name="sph_out_iir_enh_pmv_qfactor" type="double_array"/>
+  </ParamUnit>
+</ParamUnitDesc>

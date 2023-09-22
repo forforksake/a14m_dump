@@ -1,0 +1,9 @@
+service tetheroffloadservice /vendor/bin/hw/tetheroffloadservice
+    interface android.hardware.tetheroffload.config@1.0::IOffloadConfig default
+    interface android.hardware.tetheroffload.control@1.0::IOffloadControl default
+    interface android.hardware.tetheroffload.control@1.1::IOffloadControl default
+    class hal
+    user system
+    group net_admin net_raw system misc
+    oneshot
+    disabled

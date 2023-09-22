@@ -1,0 +1,13 @@
+# Aliases extracted from modules themselves.
+alias sdio:c*v037Ad018A* wmt_drv
+alias sdio:c*v037Ad018B* wmt_drv
+alias sdio:c*v037Ad018C* wmt_drv
+alias sdio:c*v037Ad6619* wmt_drv
+alias sdio:c*v037Ad020A* wmt_drv
+alias sdio:c*v037Ad020B* wmt_drv
+alias sdio:c*v037Ad020C* wmt_drv
+alias sdio:c*v037Ad5921* wmt_drv
+alias sdio:c*v037Ad6628* wmt_drv
+alias sdio:c*v037Ad6630* wmt_drv
+alias sdio:c*v037Ad6602* wmt_drv
+alias sdio:c*v037Ad6632* wmt_drv

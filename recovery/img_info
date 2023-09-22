@@ -1,0 +1,16 @@
+kernel=kernel
+ramdisk=ramdisk
+page_size=2048
+dtbo=dtbo.img
+dt=dtb.img
+kernel_size=11532508
+ramdisk_size=36207935
+dtb_offset=0x01f00000
+dtb_size=135300
+base_addr=0x40078000
+kernel_offset=0x00008000
+ramdisk_offset=0x07c08000
+tags_offset=0x0bc08000
+dtbo_offset=0xc2d10800
+cmd_line='androidboot.selinux=permissive bootopt=64S3,32N2,64N2 loop.max_part=7 buildvariant=eng'
+board=""

@@ -1,0 +1,46 @@
+#
+on early-init
+
+on post-fs-data
+
+    # Modem related device nodes
+    mkdir /mnt/vendor/nvdata/md  0770 root system
+    mkdir /mnt/vendor/nvdata/md3  0770 root system
+    mkdir /data/vendor/md3	0770 root system
+#  Build-in Modified - S
+#    insmod /vendor/lib/modules/ccci_plat.ko
+#    insmod /vendor/lib/modules/ccci.ko
+#  Build-in Modified - E
+#   chown radio radio /sys/class/BOOT/BOOT/boot/md
+    chown radio radio /sys/kernel/ccci/boot
+
+#from ccci_fsd
+    mkdir /data/vendor/mdlpm 0770 system radio
+    mkdir /data/vendor/log  0770 system root
+    restorecon /data/vendor/mdlpm
+#    mkdir /data/vendor/md3 0770 system radio
+    restorecon /data/vendor/md3
+
+    mkdir /data/vendor_de/md 0770 system radio
+    restorecon /data/vendor_de/md
+
+    restorecon_recursive /mnt/vendor/protect_f
+    restorecon_recursive /mnt/vendor/protect_s
+    restorecon_recursive /data/vendor/log
+
+#SeLinux
+
+service ccci_mdinit /vendor/bin/ccci_mdinit 0
+    user system
+    group radio system root bluetooth log
+    class core
+    priority -20
+    ioprio rt 4
+    oneshot
+
+service ccci3_mdinit /vendor/bin/ccci_mdinit 2
+    user system
+    group radio system
+    class core
+    oneshot
+

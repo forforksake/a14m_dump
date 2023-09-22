@@ -1,0 +1,4 @@
+service vendor.face-default /vendor/bin/hw/vendor.samsung.hardware.biometrics.face.jdm-service
+    class hal
+    user system
+    group system input uhid

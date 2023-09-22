@@ -1,0 +1,7 @@
+rm /data/vendor/gps/gl-*
+rm /data/vendor/gps/lh-*
+rm /data/vendor/gps/rawbinlog.out*
+rm /data/vendor/gps/memdump*
+rm /data/vendor/gps/gpsdebug.log_*.nma*
+rm /data/vendor/gps/se_*.txt
+rm /data/vendor/gps/tmp/*

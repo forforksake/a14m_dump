@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParamUnitDesc tab_name="FM" version="1.0">
+	<CategoryTypeList>
+		<CategoryType name="Profile" wording="Device">
+			<Category name="Headset" wording="3/4-pole headset"/>
+			<Category name="Speaker"/>
+		</CategoryType>
+	</CategoryTypeList>
+	<ParamUnit>
+	</ParamUnit>
+</ParamUnitDesc>

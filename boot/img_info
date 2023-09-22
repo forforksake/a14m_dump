@@ -1,0 +1,15 @@
+kernel=kernel
+ramdisk=ramdisk
+page_size=2048
+dt=dtb.img
+kernel_size=11564226
+ramdisk_size=1944709
+dtb_offset=0x07808000
+dtb_size=135300
+base_addr=0x40078000
+kernel_offset=0x00008000
+ramdisk_offset=0x07c08000
+tags_offset=0x0bc08000
+dtbo_offset=0xbff88000
+cmd_line='bootopt=64S3,32N2,64N2 loop.max_part=7'
+board="SRPVJ12A002"

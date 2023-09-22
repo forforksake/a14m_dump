@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- ASI integration to enable Playstore update -->
+    <!-- Use this if ASI Features APK is preloaded -->
+    <feature name="com.google.android.feature.ASI" />
+</config>

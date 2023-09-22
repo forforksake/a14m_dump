@@ -1,0 +1,9 @@
+service aee_aedv /vendor/bin/aee_aedv
+    group root readproc system debuggerd log radio
+    writepid /dev/cpuset/system-background/tasks
+
+service aeev_set_last_shutdown /vendor/bin/aeev -S
+    oneshot
+    disabled
+    user root
+    group root

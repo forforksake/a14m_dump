@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This XML file declares which signature|privileged permissions should be granted to privileged
+applications that come with the platform
+-->
+<permissions>
+    <privapp-permissions package="com.android.systemui">
+        <permission name="android.permission.MANAGE_VOICE_KEYPHRASES"/>
+        <!-- Add reboot permission for subsidy lock request8 -->
+        <permission name="android.permission.REBOOT"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.quicksearchbox">
+        <permission name="android.permission.GLOBAL_SEARCH"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.hotwordenrollment.okgoogle">
+        <permission name="android.permission.KEYPHRASE_ENROLLMENT_APPLICATION"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.android.hotwordenrollment.xgoogle">
+        <permission name="android.permission.KEYPHRASE_ENROLLMENT_APPLICATION"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+    </privapp-permissions>
+
+    <privapp-permissions package="com.magiear.handsfree.assistant">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+        <permission name="android.permission.CAPTURE_AUDIO_HOTWORD"/>
+    </privapp-permissions>
+
+</permissions>

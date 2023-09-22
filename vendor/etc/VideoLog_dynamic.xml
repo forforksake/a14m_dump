@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VideoSettings>
+	<Category name="Issue Type">
+		<Actions name="Video Playback Display Issue" ui_type="button">
+			<Action cmd_id="dump_vp_in" value="1"/>
+			<Action cmd_id="dump_vp_out" value="1"/>
+			<Action cmd_id="dump_vp_cc" value="1"/>
+			<Action cmd_id="advanced_c2_comp" value="2"/>
+			<Action cmd_id="advanced_c2_vdec" value="2"/>
+			<Action cmd_id="advanced_c2_vcodec" value="4"/>
+		</Actions>
+		<Actions name="Video Playback Performance Issue" ui_type="button">
+			<Action cmd_id="systrace_c2_vdec" value="1"/>
+			<Action cmd_id="systrace_c2_vcodec" value="1"/>
+			<Action cmd_id="advanced_c2_comp" value="2"/>
+			<Action cmd_id="advanced_c2_vdec" value="2"/>
+			<Action cmd_id="advanced_c2_vcodec" value="4"/>
+		</Actions>
+		<Actions name="Video Playback Function Issue" ui_type="button">
+			<Action cmd_id="dump_vp_in" value="1"/>
+			<Action cmd_id="advanced_c2_comp" value="2"/>
+			<Action cmd_id="advanced_c2_vdec" value="2"/>
+			<Action cmd_id="advanced_c2_vcodec" value="4"/>
+			<Action cmd_id="advanced_c2_vcodec_v4l2" value="5"/>
+			<Action cmd_id="advanced_c2_v4l2_device" value="5"/>
+			<Action cmd_id="advanced_c2_vcodec_proprietary" value="5"/>
+			<Action cmd_id="advanced_c2_proprietary_device" value="5"/>
+			<Action cmd_id="advanced_c2_bm" value="2"/>
+			<Action cmd_id="advanced_c2_rpu" value="2"/>
+		</Actions>
+		<Actions name="Video Record Display Issue" ui_type="button">
+			<Action cmd_id="dump_vr_in" value="1"/>
+			<Action cmd_id="dump_vr_out" value="1"/>
+			<Action cmd_id="dump_vr_cc" value="1"/>
+			<Action cmd_id="advanced_c2_comp" value="2"/>
+			<Action cmd_id="advanced_c2_venc" value="2"/>
+			<Action cmd_id="advanced_c2_vcodec" value="4"/>
+		</Actions>
+		<Actions name="Video Record Performance Issue" ui_type="button">
+			<Action cmd_id="systrace_c2_venc" value="1"/>
+			<Action cmd_id="systrace_c2_vcodec" value="1"/>
+			<Action cmd_id="advanced_c2_comp" value="2"/>
+			<Action cmd_id="advanced_c2_venc" value="2"/>
+			<Action cmd_id="advanced_c2_vcodec" value="4"/>
+		</Actions>
+		<Actions name="Video Record Function Issue" ui_type="button">
+			<Action cmd_id="dump_vp_in" value="1"/>
+			<Action cmd_id="advanced_c2_comp" value="2"/>
+			<Action cmd_id="advanced_c2_venc" value="2"/>
+			<Action cmd_id="advanced_c2_vcodec" value="4"/>
+			<Action cmd_id="advanced_c2_vcodec_v4l2" value="5"/>
+			<Action cmd_id="advanced_c2_v4l2_device" value="5"/>
+			<Action cmd_id="advanced_c2_vcodec_proprietary" value="5"/>
+			<Action cmd_id="advanced_c2_proprietary_device" value="5"/>
+			<Action cmd_id="advanced_c2_bm" value="2"/>
+			<Action cmd_id="advanced_c2_rpu" value="2"/>
+		</Actions>
+	</Category>
+	<Category name="Dump Settings">
+		<Group name="Video Playback Dump" ui_type="default">
+			<Command id="dump_vp_in" name="VP input dump" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.vdec.dump.input" default="0"/>
+			<Command id="dump_vp_out" name="VP output dump" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.vdec.dump.output" default="0"/>
+			<Command id="dump_vp_cc" name="VP output color convert dump" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.vdec.dump.output.cc" default="0"/>
+		</Group>
+		<Group name="Video Record Dump" ui_type="default">
+			<Command id="dump_vr_in" name="VR input dump" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.venc.dump.input" default="0"/>
+			<Command id="dump_vr_out" name="VR output dump" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.venc.dump.output" default="0"/>
+			<Command id="dump_vr_cc" name="VR input color convert dump" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.venc.dump.input.cc" default="0"/>
+		</Group>
+		<Group name="Action" ui_type="default">
+			<Command id="dump_action_1" name="Copy dump to debuglogger" ui_type="button" button_action="copy /data/vendor/vcodec to /data/debuglogger/vcodec/" cmd_type="copy"/>
+			<Command id="dump_action_2" name="Clear dump" ui_type="button" button_action="delete /data/debuglogger/vcodec,/data/vendor/vcodec" cmd_type="delete"/>
+		</Group>
+	</Category>
+	<Category name="Systrace">
+		<Group name="C2" ui_type="default">
+			<Command id="systrace_c2_vdec" name="c2 vdec trace" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.vdec.systrace" default="0"/>
+			<Command id="systrace_c2_venc" name="c2 venc trace" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.venc.systrace" default="0"/>
+			<Command id="systrace_c2_vcodec" name="c2 vcodec trace" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vendor.mtk.c2.vcodec.systrace" default="0"/>
+		</Group>
+	</Category>
+	<Category name="Advanced">
+		<Group name="C2" ui_type="default">
+			<Command id="advanced_c2_comp" name="component log" ui_type="list" entries="0,1,2" cmd_type="set_property" property="vendor.mtk.c2.enable.comp.log" default="0"/>
+			<Command id="advanced_c2_vdec" name="vdec log" ui_type="list" entries="0,1,2" cmd_type="set_property" property="vendor.mtk.c2.enable.vdec.log" default="0"/>
+			<Command id="advanced_c2_venc" name="venc log" ui_type="list" entries="0,1,2" cmd_type="set_property" property="vendor.mtk.c2.enable.venc.log" default="0"/>
+			<Command id="advanced_c2_vcodec" name="vcodec log" ui_type="list" entries="0,1,2,3,4" cmd_type="set_property" property="vendor.mtk.c2.enable.vcodec.log" default="0"/>
+			<Command id="advanced_c2_vcodec_v4l2" name="VCodecV4L2 log" ui_type="list" entries="0,1,2,3,4,5" cmd_type="set_property" property="vendor.mtk.c2.enable.vcodec.log.VCodecV4L2" default="0"/>
+			<Command id="advanced_c2_v4l2_device" name="V4L2Device log" ui_type="list" entries="0,1,2,3,4,5" cmd_type="set_property" property="vendor.mtk.c2.enable.vcodec.log.V4L2Device" default="0"/>
+			<Command id="advanced_c2_vcodec_proprietary" name="VCodecProprietary log" ui_type="list" entries="0,1,2,3,4,5" cmd_type="set_property" property="vendor.mtk.c2.enable.vcodec.log.VCodecProprietary" default="0"/>
+			<Command id="advanced_c2_proprietary_device" name="ProprietaryDevice log" ui_type="list" entries="0,1,2,3,4,5" cmd_type="set_property" property="vendor.mtk.c2.enable.vcodec.log.ProprietaryDevice" default="0"/>
+			<Command id="advanced_c2_bm" name="Buffer manager log" ui_type="list" entries="0,1,2" cmd_type="set_property" property="vendor.mtk.c2.enable.bm.log" default="0"/>
+			<Command id="advanced_c2_rpu" name="ReflectedParamUpdater log" ui_type="list" entries="0,1,2" cmd_type="set_property" property="vendor.mtk.c2.enable.rpu.log" default="0"/>
+		</Group>
+		<Group name="VPUD" ui_type="default">
+			<Command id="advanced_vpud_vpud" name="vpud log" ui_type="list" entries="0,1,2,3" cmd_type="set_property" property="vcodec::1::vpud_log" default="0"/>
+			<Command id="advanced_vpud_codec" name="codec log" ui_type="list" entries="0,1,3,7,15,31" cmd_type="set_property" property="vcodec::1::codec_log" default="0"/>
+			<Command id="advanced_vpud_comhal" name="comhal log" ui_type="list" entries="0,1,3,7,15,31" cmd_type="set_property" property="vcodec::1::comhal_log" default="0"/>
+			<Command id="advanced_vpud_internal_log" name="internal log" ui_type="list" entries="0,1,2" cmd_type="set_property" property="vcodec::1::internal_log" default="0"/>
+			<Command id="advanced_vpud_get_input" name="get input" ui_type="list" entries="0,1,2" cmd_type="set_property" property="vcodec::1::get_input" default="0"/>
+			<Command id="advanced_vpud_get_output" name="get output" ui_type="edittext" text_type="integer" cmd_type="set_property" property="vcodec::1::get_output" default="0"/>
+			<Command id="advanced_vpud_get_output_start" name="get output start" ui_type="edittext" text_type="integer" cmd_type="set_property" property="vcodec::1::get_output_start" default="0"/>
+			<Command id="advanced_vpud_file_path" name="file path" ui_type="edittext" text_type="string" cmd_type="set_property" property="vcodec::1::file_path" default="0"/>
+		</Group>
+		<Group name="Kernel" ui_type="default">
+			<Command id="advanced_kernel_vcu" name="vcu log" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vcodec::1::vcu_log" default="0"/>
+			<Command id="advanced_kernel_vcodec_dbg" name="mtk_vcodec_dbg" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vcodec::1::mtk_vcodec_dbg" default="0"/>
+			<Command id="advanced_kernel_v4l2_dbg_level" name="mtk_v4l2_dbg_level" ui_type="list" entries="0,1,2,3,7,15,31" cmd_type="set_property" property="vcodec::1::mtk_v4l2_dbg_level" default="0"/>
+			<Command id="advanced_kernel_vcodec_perf" name="mtk_vcodec_perf" ui_type="checkbox" checked="1" unchecked="0" cmd_type="set_property" property="vcodec::1::mtk_vcodec_perf" default="0"/>
+		</Group>
+	</Category>
+	<Category name="">
+		<Group name="" ui_type="default">
+			<Command id="restore" name="Restore All" ui_type="button" button_action="restore" cmd_type="restore"/>
+		</Group>
+	</Category>
+</VideoSettings>

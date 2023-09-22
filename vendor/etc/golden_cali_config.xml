@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+供数：
+back_main_camera:a1401backs5kjn1hlt_mipi_raw:HQ20209078000
+back_main_camera:a1402backhi5022qxl_mipi_raw:HQ20209077000
+back_main_camera:a1403backhi5022qly_mipi_raw:HQ20209071000
+back_main_camera:a1404backs5kjn1txd_mipi_raw:HQ2020909T000
+front_main_camera:a1401fronts5k3l6ly_mipi_raw:HQ20209074000
+front_main_camera:a1402frontgc13a0xl_mipi_raw:HQ2020906Y000
+front_main_camera:a1403frontsc1301cstxd_mipi_raw:HQ20209079000
+back_aux1_camera:a1401widehi556wly_mipi_raw:HQ2020909P000
+back_aux1_camera:a1402widesc520cstxd_mipi_raw:HQ2020909Q000
+back_aux1_camera:a1403wideov05ahlt_mipi_raw:HQ2020909R000
+back_aux2_camera:a1401macroov02b10ly_mipi_raw:HQ2020906Z000
+back_aux2_camera:a1402macrosc202cscxt_mipi_raw:HQ20209073000
+back_aux2_camera:a1403macrogc02m1hlt_mipi_raw:HQ20209070000
+
+-->
+<!-- hs14 code for SR-AL6528A-01-777 by chenweibing at 20221220 start -->
+<Sensors>
+    <Item back_main_camera="a1401backs5kjn1hlt_mipi_raw:HQ20209078000"  back_aux1_camera= "a1401widehi556wly_mipi_raw:HQ2020909P000" filepath="/vendor/lib/dualcali_golden_hlt_ly.data"></Item>
+    <Item back_main_camera="a1401backs5kjn1hlt_mipi_raw:HQ20209078000"  back_aux1_camera= "a1402widesc520cstxd_mipi_raw:HQ2020909Q000" filepath="/vendor/lib/dualcali_golden_hlt_txd.data"></Item>
+    <Item back_main_camera="a1401backs5kjn1hlt_mipi_raw:HQ20209078000"  back_aux1_camera= "a1403wideov05ahlt_mipi_raw:HQ2020909R000" filepath="/vendor/lib/dualcali_golden_hlt_hlt.data"></Item>
+    <Item back_main_camera="a1402backhi5022qxl_mipi_raw:HQ20209077000"  back_aux1_camera= "a1401widehi556wly_mipi_raw:HQ2020909P000" filepath="/vendor/lib/dualcali_golden_xl_ly.data"></Item>
+    <Item back_main_camera="a1402backhi5022qxl_mipi_raw:HQ20209077000"  back_aux1_camera= "a1402widesc520cstxd_mipi_raw:HQ2020909Q000" filepath="/vendor/lib/dualcali_golden_xl_txd.data"></Item>
+    <Item back_main_camera="a1402backhi5022qxl_mipi_raw:HQ20209077000"  back_aux1_camera= "a1403wideov05ahlt_mipi_raw:HQ2020909R000" filepath="/vendor/lib/dualcali_golden_xl_hlt.data"></Item>
+    <Item back_main_camera="a1403backhi5022qly_mipi_raw:HQ20209071000"  back_aux1_camera= "a1401widehi556wly_mipi_raw:HQ2020909P000" filepath="/vendor/lib/dualcali_golden_ly_ly.data"></Item>
+    <Item back_main_camera="a1403backhi5022qly_mipi_raw:HQ20209071000"  back_aux1_camera= "a1402widesc520cstxd_mipi_raw:HQ2020909Q000" filepath="/vendor/lib/dualcali_golden_ly_txd.data"></Item>
+    <Item back_main_camera="a1403backhi5022qly_mipi_raw:HQ20209071000"  back_aux1_camera= "a1403wideov05ahlt_mipi_raw:HQ2020909R000" filepath="/vendor/lib/dualcali_golden_ly_hlt.data"></Item>
+    <Item back_main_camera="a1404backs5kjn1txd_mipi_raw:HQ2020909T000"  back_aux1_camera= "a1401widehi556wly_mipi_raw:HQ2020909P000" filepath="/vendor/lib/dualcali_golden_txd_ly.data"></Item>
+    <Item back_main_camera="a1404backs5kjn1txd_mipi_raw:HQ2020909T000"  back_aux1_camera= "a1402widesc520cstxd_mipi_raw:HQ2020909Q000" filepath="/vendor/lib/dualcali_golden_txd_txd.data"></Item>
+    <Item back_main_camera="a1404backs5kjn1txd_mipi_raw:HQ2020909T000"  back_aux1_camera= "a1403wideov05ahlt_mipi_raw:HQ2020909R000" filepath="/vendor/lib/dualcali_golden_txd_hlt.data"></Item>
+</Sensors>
+<!-- hs14 code for SR-AL6528A-01-777 by chenweibing at 20221220 end -->

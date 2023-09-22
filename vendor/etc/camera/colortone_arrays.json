@@ -1,0 +1,43 @@
+[
+  {
+    "mode": "natural",
+    "module": [
+    ]
+  },
+  {
+    "mode": "bright",
+    "module": [
+      {
+        "name": "hi556_txd_mipi_raw",
+        "wb": "5200",
+        "ev": "-21"
+      },
+      {
+        "name": "hi556_ofilm_mipi_raw",
+        "wb": "5200",
+        "ev": "-21"
+      },
+      {
+        "name": "gc5035_ly_mipi_raw",
+        "wb": "5200",
+        "ev": "-21"
+      },
+      {
+        "name": "gc5035_dd_mipi_raw",
+        "wb": "5200",
+        "ev": "-21"
+      },
+      {
+        "name": "gc5035_xl_mipi_raw",
+        "wb": "5200",
+        "ev": "5"
+      },
+      {
+        "name": "gc02m1_sjc_mipi_raw",
+        "wb": "5200",
+        "ev": "5"
+      }
+    ]
+  }
+]
+

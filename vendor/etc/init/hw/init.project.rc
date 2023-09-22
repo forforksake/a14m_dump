@@ -1,0 +1,94 @@
+# MTK project .rc configure
+
+on early-init
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules trace_mmstat.ko
+
+# A14 code for SR-AL6528A-01-6 by lijun at 2022/10/17 start
+import /odm/etc/init/${ro.boot.nfcinfo}/android.hardware.nfc@1.2-service.sec.rc
+# A14 code for SR-AL6528A-01-6 by lijun at 2022/10/17 start
+
+on init
+    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
+    mkdir /storage/usbotg 0700 root root
+
+on post-fs-data
+
+#Camera
+    chmod 0660 /dev/MAINAF
+    chown system camera /dev/MAINAF
+
+    chmod 0660 /dev/MAINAF2
+    chown system camera /dev/MAINAF2
+
+    chmod 0660 /dev/SUBAF
+    chown system camera /dev/SUBAF
+
+    chmod 0660 /dev/GAF001AF
+    chown system camera /dev/GAF001AF
+
+    chmod 0660 /dev/DW9714AF
+    chown system camera /dev/DW9714AF
+
+    chmod 0660 /dev/LC898212AF
+    chown system camera /dev/LC898212AF
+
+    chmod 0660 /dev/BU64745GWZAF
+    chown system camera /dev/BU64745GWZAF
+
+# hs14 code added for SR-AL6528A-01-272 by Wentao at 2022/10/09 start
+    mkdir /data/vendor/focaltech 0760 system system
+    restorecon /data/vendor/focaltech
+    chmod 0660 /dev/focaltech_fp
+    chown system system /dev/focaltech_fp
+# hs14 code added for SR-AL6528A-01-272 by Wentao at 2022/10/09 end
+
+#SMB
+    chown system system /proc/smb/ScreenComm
+    chmod 0660 /proc/smb/ScreenComm
+
+    chmod 0660 /dev/spm
+    chown system system /dev/spm
+
+
+on init
+    # hs14 code for SR-AL6528A-01-282|SR-AL6528A-01-292 by xiongxiaoliang at 2022/10/10 start
+    chmod 0666 /dev/fpsdev0
+    # hs14 code for SR-AL6528A-01-282|SR-AL6528A-01-292 by xiongxiaoliang at 2022/10/10 end
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+# hs14 code for SR-AL6528A-01-262 by zhangziyi at 2022/10/05 start
+#import silead_fingerprint
+on post-fs-data
+    mkdir /data/vendor/silead   0770 system system
+    chmod 0666 /dev/spidev1.0
+    chmod 0666 /dev/spidev0.0
+    chmod 0666 /dev/silead_fp
+    chmod 0666 /dev/silead_stub
+# hs14 code for SR-AL6528A-01-262 by zhangziyi at 2022/10/05 end
+
+# start mmstat
+on property:sys.boot_completed=1
+    mkdir /sys/kernel/tracing/instances/mmstat 711
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 0
+    write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
+    write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 1
+
+
+# hs14 code for  SR-AL6528A-01-792  by qiushangjie at 20221219 start
+on boot
+    symlink /sys/class/power_supply/battery/cycle_count /efs/FactoryApp/batt_discharge_level
+    chown system system /efs/FactoryApp/batt_discharge_level
+    chmod 0664 /efs/FactoryApp/batt_discharge_level
+# hs14 code for  SR-AL6528A-01-792  by qiushangjie at 20221219 end

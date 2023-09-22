@@ -1,0 +1,56 @@
+#line 1 "vendor/samsung/system/sepolicy/samsung/service_contexts"
+# Due to AIDL HAL introduction, vendors can publish services
+# with servicemanager. vendor_service_contexts is labeled as
+# vendor_service_contexts_file, not nonplat_service_contexts_file.
+# And pack it to vendor partition.
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-3993
+vendor.samsung.hardware.light.ILights/default            u:object_r:hal_light_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-3902
+vendor.samsung.hardware.base.ISehBase/default            u:object_r:hal_base_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4117
+vendor.samsung.hardware.hyper.ISehHyPer/default      u:object_r:hal_hyper_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-4208
+vendor.samsung.hardware.uwb@1.0::ISehUwb/default      u:object_r:hal_uwb_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6118
+vendor.samsung.hardware.media.converter.ISehColorConverterStore/default      u:object_r:hal_converter_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6133/6523
+vendor.samsung.hardware.media.mpp.ISehMppStore/default		u:object_r:hal_mpp_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6181
+vendor.samsung.hardware.keymint.ISehKeyMintExtension/default		u:object_r:hal_keymint_service:s0
+vendor.samsung.hardware.keymint.ISehKeyMintFactory/default			u:object_r:hal_keymint_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6408
+vendor.samsung.hardware.gnss.ISehGnss/default                u:object_r:hal_gnss_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6460
+vendor.samsung.hardware.security.hdcp.wifidisplay.ISehHdcp/default                u:object_r:hal_hdcp_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6578
+android.hardware.security.keymint.IKeyMintDevice/strongbox             	   u:object_r:hal_keymint_service:s0
+android.hardware.security.sharedsecret.ISharedSecret/strongbox             u:object_r:hal_sharedsecret_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6575
+vendor.samsung.hardware.kpm.ISehKpm/default      u:object_r:hal_kpm_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6870
+android.hardware.neuralnetworks.IDevice/gpu_sl_shim     u:object_r:hal_neuralnetworks_gpu_service:s0
+android.hardware.neuralnetworks.IDevice/npu_sl_shim     u:object_r:hal_neuralnetworks_npu_service:s0
+
+# https://mobilerndhub.sec.samsung.net/its/browse/SEANDROID-6967
+vendor.samsung.hardware.ifaa@1.0::ISehIfaa/default									u:object_r:hal_ifaa_service:s0
+#line 1 "device/mediatek/sepolicy/bsp/non_plat/service_contexts"
+# ==============================================
+# MTK Policy Rule
+# ==============================================
+
+android.hardware.neuralnetworks.IDevice/mtk-gpu_shim    u:object_r:hal_neuralnetworks_service:s0
+android.hardware.neuralnetworks.IDevice/mtk-dsp_shim    u:object_r:hal_neuralnetworks_service:s0
+android.hardware.neuralnetworks.IDevice/mtk-mdla_shim   u:object_r:hal_neuralnetworks_service:s0
+android.hardware.neuralnetworks.IDevice/mtk-neuron_shim u:object_r:hal_neuralnetworks_service:s0
